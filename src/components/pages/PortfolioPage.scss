@@ -1,0 +1,51 @@
+span {
+  cursor: pointer;
+}
+
+.navbar {
+  height: 100vh;
+  text-align: center;
+  position: fixed;
+
+}
+
+.nav-item {
+  margin: 0;
+}
+
+.jumbotron {
+  margin-bottom: 0 !important;
+}
+
+.screenshot {
+  width: 100%;
+}
+
+.image a img {
+  transition: 0.2s;
+}
+
+.image a:hover img {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+.badge {
+  background: grey !important;
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    height: 30px;
+    width: 100vw;
+    text-align: center;
+    position: relative;
+
+  }
+  .title {
+    font-size: 1.1rem;
+  }
+  .image a:hover img {
+    transform: none;
+  }
+}

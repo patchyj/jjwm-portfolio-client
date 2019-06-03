@@ -1,0 +1,159 @@
+h1,
+.construction {
+  padding: 2.5rem;
+}
+
+h4 {
+  margin: 3rem;
+}
+
+small {
+  width: 100%;
+}
+
+.typewriter {
+  font-family: Courier, monospace;
+  display: inline-block;
+  margin-top: 5.5rem;
+}
+
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  letter-spacing: 2px;
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+  white-space: nowrap;
+  font-size: 30px;
+  font-weight: 700;
+  border-right: 4px solid orange;
+  box-sizing: border-box;
+}
+
+.hide-on-large {
+  display: none;
+}
+
+.hide-on-small {
+  display: block;
+}
+
+.parallax-container {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.window {
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 400px;
+  flex: auto;
+}
+
+.window .view {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.middle {
+  margin-top: 200px;
+}
+
+.right {
+  margin-top: 400px;
+}
+
+.view1 {
+  background: url('../images/chimp-poster.jpg');
+}
+
+.section-2 {
+  color: grey;
+}
+
+.social,
+.recommend {
+  width: 300px;
+  padding-top: 40vh;
+  margin: auto;
+  transform: translateX(-35%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social a i {
+  transition: 0.2s;
+}
+.social a:hover i {
+  color: teal;
+}
+
+@media (max-width: 720px) {
+  height: auto;
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h4 {
+    padding: 1.5rem 0;
+  }
+
+  .typewriter {
+    margin-top: 1.5rem;
+    display: inline;
+  }
+
+  .typewriter-text {
+    padding: 0;
+    margin-top: 0;
+    font-size: 15px;
+    animation: none;
+  }
+
+  .hide-on-large {
+    display: block;
+  }
+
+  .hide-on-small {
+    display: none;
+  }
+
+  .social,
+  .recommend {
+    width: 100%;
+    padding-top: 5rem;
+    margin: auto;
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .window {
+    margin: 100px 10px;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
