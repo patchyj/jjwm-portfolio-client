@@ -4,7 +4,6 @@ import data from './projects.json';
 import './PortfolioPage.scss';
 import projectImages from '../../images';
 
-console.log('==========\n', projectImages, '\n==========');
 const Social = styled.h5`
   a {
     padding-right: 10px;

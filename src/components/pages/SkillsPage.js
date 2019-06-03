@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import uuidv1 from 'uuid/v1';
 
 const skills = [
   { name: 'HTML', level: 90 },
@@ -32,7 +33,7 @@ const StyledProgressBar = styled.div`
 
 const Skills = () => {
   const bars = skills.map(skill => (
-    <div className="col-md-4 col-sm-6 p-2">
+    <div className="col-md-4 col-sm-6 p-2" key={uuidv1()}>
       <div className="row m-0">
         <div className="col-md-4">
           <label htmlFor="html">{skill.name}</label>

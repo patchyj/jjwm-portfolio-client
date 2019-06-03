@@ -1,7 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable import/no-named-as-default */
 import { Route, Switch } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import styled from 'styled-components';
@@ -10,6 +9,7 @@ import HomePage from './HomePage';
 import AboutPage from './pages/AboutPage';
 import PortfolioPage from './pages/PortfolioPage';
 import SkillsPage from './pages/SkillsPage';
+import BlogPage from './pages/BlogPage';
 
 const StyledApp = styled.nav`
   [class*="col-"] {
@@ -31,6 +31,7 @@ class App extends React.Component {
               <Route exact path="/about" component={AboutPage} />
               <Route exact path="/portfolio" component={PortfolioPage} />
               <Route exact path="/skills" component={SkillsPage} />
+              <Route exact path="/posts" component={BlogPage} />
             </Switch>
           </div>
         </div>

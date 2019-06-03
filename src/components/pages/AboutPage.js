@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
 const About = () => (
@@ -21,7 +22,7 @@ const About = () => (
               unglamorous, monotonous and soul-destroying feeling of sitting at
               a desk at a job you hate knowing you could do more. So I started
               researching. I threw myself at YouTube and Udemy tutorials, hoping
-              to find something that I could make my own <a href="">Ikigai</a>{" "}
+              to find something that I could make my own <a href="https://www.google.com">Ikigai</a>{' '}
               career of.
             </p>
             <p>
