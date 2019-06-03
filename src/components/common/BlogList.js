@@ -1,15 +1,10 @@
 import React from 'react';
+import uuidv2 from 'uuid/v1';
+import BlogCard from './BlogCard';
 
 const BlogList = (props) => {
   const { posts } = props;
-  const allBlogs = posts.map(post => (
-    <div className="row mt-5">
-      <div className="card col-md-6 offset-md-3 p-5">
-        <h1 className="p-0">{post.title}</h1>
-        <h5 className="text-muted">{post.tagline}</h5>
-      </div>
-    </div>
-  ));
+  const allBlogs = posts.map(post => <BlogCard post={post} key={uuidv2()} />);
   return (
     <div className="container">
       {allBlogs}

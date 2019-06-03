@@ -9,7 +9,7 @@ import HomePage from './HomePage';
 import AboutPage from './pages/AboutPage';
 import PortfolioPage from './pages/PortfolioPage';
 import SkillsPage from './pages/SkillsPage';
-import BlogPage from './pages/BlogPage';
+import BlogContainer from './pages/BlogContainer';
 
 const StyledApp = styled.nav`
   [class*="col-"] {
@@ -31,7 +31,7 @@ class App extends React.Component {
               <Route exact path="/about" component={AboutPage} />
               <Route exact path="/portfolio" component={PortfolioPage} />
               <Route exact path="/skills" component={SkillsPage} />
-              <Route exact path="/posts" component={BlogPage} />
+              <Route exact path="/posts" component={BlogContainer} />
             </Switch>
           </div>
         </div>

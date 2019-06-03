@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BlogList from '../common/BlogList';
 
-class BlogPage extends Component {
+class BlogContainer extends Component {
   constructor() {
     super();
     this.state = {
@@ -45,4 +45,4 @@ class BlogPage extends Component {
   }
 }
 
-export default BlogPage;
+export default BlogContainer;
