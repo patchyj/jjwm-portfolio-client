@@ -19,7 +19,7 @@ const HomePage = () => (
       <h1 className="display-4 text-right">
           Jack
         <br />
-          McGregor
+          McGregor 2nd
       </h1>
       <div className="typewriter">
         <h4 className="typewriter-text text-muted">
