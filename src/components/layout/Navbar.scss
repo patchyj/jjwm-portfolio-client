@@ -1,0 +1,19 @@
+.navbar {
+  position: fixed !important;
+  width: 16.7%;
+
+  .nav-item {
+    margin-right: 0 !important;
+  }
+}
+
+@media only screem and (max-width: 720px) {
+  .navbar {
+    position: fixed !important;
+    width: 16.7%;
+
+    .nav-item {
+      margin-right: 0 !important;
+    }
+  }
+}
