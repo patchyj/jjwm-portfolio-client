@@ -36,5 +36,8 @@ dist
 #VSCode metadata
 .vscode
 
+#ENV
+.env
+
 # Mac files
 .DS_Store

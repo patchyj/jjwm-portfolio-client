@@ -6,12 +6,13 @@ import {
   GET_POSTS_FAILURE
 } from '../types';
 import { getPostsQuery } from './postQueries';
+import { baseURL } from '../../utils/baseURL';
 
 export const getPosts = () => (dispatch) => {
   dispatch({ type: GET_POSTS_STARTED });
 
   axios
-    .post('http://localhost:4000/graphql', {
+    .post(`${baseURL}/graphql`, {
       query: getPostsQuery().query
     })
     .then((res) => {

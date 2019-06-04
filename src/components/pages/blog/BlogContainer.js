@@ -35,6 +35,7 @@ class BlogContainer extends Component {
   // }
 
   render() {
+    // eslint-disable-next-line react/prop-types
     const { posts: { posts } } = this.props;
     return (
       <div>

@@ -9,6 +9,7 @@ const imageStyle = image => ({
   backgroundPosition: 'center center'
 });
 
+// eslint-disable-next-line react/prop-types
 const BlogCard = ({ post }) => (
   <div className="row mt-5">
     <div className="card col-md-8 offset-md-2 p-5">
