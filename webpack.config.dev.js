@@ -11,6 +11,9 @@ export default {
       'react-dom': '@hot-loader/react-dom'
     }
   },
+  node: {
+    fs: 'empty'
+  },
   devtool: 'cheap-module-eval-source-map', // more info:https://webpack.js.org/guides/development/#using-source-maps and https://webpack.js.org/configuration/devtool/
   entry: [
     // must be first entry to properly set public path
