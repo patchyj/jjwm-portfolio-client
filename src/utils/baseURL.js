@@ -7,12 +7,10 @@ let baseURL = '';
 switch (NODE_ENV) {
   case 'development':
     baseURL = 'http://localhost:4000';
-  case 'test':
-    baseURL = 'http://localhost:4000';
   case 'production':
     baseURL = 'https://jjwm-portfolio-api.herokuapp.com';
   default:
-    baseURL = 'http://localhost:4000';
+    baseURL = '';
     break;
 }
 
