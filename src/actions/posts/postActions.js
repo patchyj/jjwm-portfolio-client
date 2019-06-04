@@ -9,6 +9,8 @@ import { getPostsQuery } from './postQueries';
 import { baseURL } from '../../utils/baseURL';
 
 // eslint-disable-next-line no-console
+console.log(`${baseURL}/graphql`);
+
 export const getPosts = () => (dispatch) => {
   dispatch({ type: GET_POSTS_STARTED });
 
