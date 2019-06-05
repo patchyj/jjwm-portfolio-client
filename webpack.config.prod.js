@@ -19,6 +19,9 @@ export default {
       'react-dom': '@hot-loader/react-dom'
     }
   },
+  node: {
+    fs: 'empty'
+  },
   devtool: 'source-map', // more info:https://webpack.js.org/guides/production/#source-mapping and https://webpack.js.org/configuration/devtool/
   entry: path.resolve(__dirname, 'src/index'),
   target: 'web',
@@ -123,8 +126,7 @@ export default {
           {
             loader: 'file-loader',
             options: {
-              limit: 8000, // Convert images < 8kb to base64 strings
-              name: 'images/[hash]-[name].[ext]'
+              name: '[name].[ext]'
             }
           }
         ]
