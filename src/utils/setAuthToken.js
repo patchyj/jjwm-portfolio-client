@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { baseURL } from './baseURL';
+// import { baseURL } from './baseURL';
 
-axios.defaults.baseURL = baseURL;
+// axios.defaults.baseURL = baseURL;
 // console.log('==========================\n', axios.defaults.baseURL, '\n==========================');
 
 const setAuthToken = (token) => {

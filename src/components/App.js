@@ -9,7 +9,7 @@ import HomePage from './HomePage';
 import AboutPage from './pages/AboutPage';
 import PortfolioPage from './pages/PortfolioPage';
 import SkillsPage from './pages/SkillsPage';
-import BlogContainer from './pages/BlogContainer';
+import BlogContainer from './pages/blog/BlogContainer';
 
 const StyledApp = styled.nav`
   [class*="col-"] {

@@ -1,19 +1,11 @@
+import config from '../../config';
+
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable import/no-mutable-exports */
 /* eslint-disable no-fallthrough */
-const { NODE_ENV } = process.env;
-let baseURL = '';
+const { NODE_ENV } = config;
 
-switch (NODE_ENV) {
-  case 'development':
-    baseURL = 'http://localhost:4000';
-  case 'test':
-    baseURL = 'http://localhost:4000';
-  case 'production':
-    baseURL = 'http://localhost:4000';
-  default:
-    baseURL = 'http://localhost:4000';
-    break;
-}
+export const baseURL = NODE_ENV === 'development' ? 'http://localhost:4000' : 'https://jjwm-portfolio-api.herokuapp.com';
+// export const baseURL = NODE_ENV === 'development' ? BASE_URL_DEV : BASE_URL_PROD;
 
-export { baseURL };
+// console.log(BASE_URL_DEV);

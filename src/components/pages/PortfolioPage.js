@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import data from './projects.json';
@@ -25,7 +27,8 @@ class PortfolioPage extends Component {
     this.onChangeDev = this.onChangeDev.bind(this);
   }
 
-  onChangeDev = (e) => {
+  onChangeDev = () => {
+    // eslint-disable-next-line react/no-access-state-in-setstate
     this.setState({ dev: !this.state.dev });
   };
 
