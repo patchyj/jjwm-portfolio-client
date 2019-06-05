@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const express = require('express');
 // var serveStatic = require('serve-static');
 const app = express();
