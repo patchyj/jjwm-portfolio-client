@@ -6,11 +6,12 @@ const BlogList = (props) => {
   // eslint-disable-next-line react/prop-types
   const { posts } = props;
   // eslint-disable-next-line no-console
-  console.log(posts);
   const allBlogs = posts && posts.map(post => <BlogCard post={post} key={uuidv2()} />);
   return (
     <div className="container">
+      <div className="row">
       {allBlogs}
+      </div>
     </div>
   );
 };
