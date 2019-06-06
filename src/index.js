@@ -10,7 +10,7 @@ require('./favicon.ico');
 // Tell webpack to load favicon.ico
 const store = configureStore();
 
-setInterval(() => axios.get('https://jjwm-portfolio-api.herokuapp.com/graphql'), 420000);
+setInterval(() => axios.get('https://jjwm-portfolio-api.herokuapp.com/test'), 60000);
 
 render(
   <AppContainer>
