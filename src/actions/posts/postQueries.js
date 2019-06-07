@@ -8,6 +8,8 @@ export function getPostsQuery() {
           title
           tagline
           images
+          tags
+          createdAt
           author {
             id
             firstName

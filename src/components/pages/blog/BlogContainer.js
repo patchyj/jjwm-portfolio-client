@@ -1,10 +1,10 @@
 /* eslint-disable react/no-did-update-set-state */
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import BlogList from './BlogList';
-import * as postActions from '../../../actions/posts/postActions';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import BlogList from "./BlogList";
+import * as postActions from "../../../actions/posts/postActions";
 
 class BlogContainer extends Component {
   componentDidMount() {
@@ -16,6 +16,7 @@ class BlogContainer extends Component {
   render() {
     // eslint-disable-next-line react/prop-types
     const { posts: { posts } } = this.props;
+
     return (
       <div>
         <h1 className="display-4 text-center">Blog</h1>
