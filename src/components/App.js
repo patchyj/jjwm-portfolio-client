@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import Navbar from './layout/Navbar';
 import HomePage from './HomePage';
 import AboutPage from './pages/AboutPage';
-import PortfolioPage from './pages/PortfolioPage';
+import PortfolioContainer from './pages/portfolio/PortfolioContainer';
 import SkillsPage from './pages/SkillsPage';
 import BlogContainer from './pages/blog/BlogContainer';
 
@@ -29,7 +29,7 @@ class App extends React.Component {
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/about" component={AboutPage} />
-              <Route exact path="/portfolio" component={PortfolioPage} />
+              <Route exact path="/portfolio" component={PortfolioContainer} />
               <Route exact path="/skills" component={SkillsPage} />
               <Route exact path="/posts" component={BlogContainer} />
             </Switch>

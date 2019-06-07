@@ -10,7 +10,7 @@ const BlogList = (props) => {
   return (
     <div className="container">
       <div className="row">
-      {allBlogs}
+        {allBlogs}
       </div>
     </div>
   );

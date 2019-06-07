@@ -1,0 +1,83 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import data from './projects.json';
+import './PortfolioContainer.scss';
+import Development from './Development';
+import Design from './Design';
+import * as projectActions from '../../../actions/projects/projectActions';
+
+class PortfolioContainer extends Component {
+  constructor() {
+    super();
+    this.state = {
+      dev: true
+    };
+
+    this.onChangeDev = this.onChangeDev.bind(this);
+  }
+
+  componentDidMount() {
+    const { actions } = this.props;
+    actions.projectActions.getProjects();
+  }
+
+  onChangeDev = () => {
+    // eslint-disable-next-line react/no-access-state-in-setstate
+    this.setState({ dev: !this.state.dev });
+  };
+
+  render() {
+    const { dev } = this.state;
+    const { projects: { projects: projectsList } } = this.props;
+
+    return (
+      <div>
+        <div className="jumbotron jumbotron-fluid">
+          <div className="container">
+            <h3 className="py-4">Portfolio</h3>
+            <h4 className="m-0 py-5">
+              <span className={!dev ? 'text-muted' : ''} onClick={this.onChangeDev}>
+                DEV
+              </span>{' '}
+              |{' '}
+              <span className={dev ? 'text-muted' : ''} onClick={this.onChangeDev}>
+                DESIGN
+              </span>
+            </h4>
+            {dev && <Development projects={data} />}
+            {!dev && <Design projects={projectsList} />}
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+PortfolioContainer.propTypes = {
+  actions: PropTypes.shape({ getPosts: PropTypes.func }).isRequired,
+  projects: PropTypes.shape({}).isRequired,
+};
+
+function mapStateToProps(state) {
+  return {
+    projects: state.projects,
+    errors: state.errors
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: {
+      projectActions: bindActionCreators(projectActions, dispatch)
+    }
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PortfolioContainer);

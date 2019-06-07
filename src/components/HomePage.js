@@ -11,6 +11,16 @@ const ParallaxContainer = styled.div`
   display: flex;
   max-width: 960px;
   margin: 0 auto;
+
+  .view1 {
+    border-radius: 130px 130px 0 130px
+  }
+  .view2 {
+    border-radius: 0 130px 0 130px
+  }
+  .view3 {
+    border-radius: 0 130px 130px 130px
+  }
 `;
 
 const HomePage = () => (
@@ -19,7 +29,7 @@ const HomePage = () => (
       <h1 className="display-4 text-right">
           Jack
         <br />
-          McGregor 2nd
+          McGregor
       </h1>
       <div className="typewriter">
         <h4 className="typewriter-text text-muted">
@@ -34,11 +44,11 @@ const HomePage = () => (
         </div>
 
         <div className="window">
-          <div className="view view1 middle" id="view2" />
+          <div className="view view2 middle" id="view2" />
         </div>
 
         <div className="window">
-          <div className="view view1 right" id="view3" />
+          <div className="view view3 right" id="view3" />
         </div>
       </ParallaxContainer>
     </StyledSection>
@@ -63,7 +73,7 @@ const HomePage = () => (
       <hr />
       <small className="text-muted text-center">
           Site built with NextJS and hosted on Heroku. See the code{' '}
-        <a href="https://github.com/patchyj/nextjs-portfolio" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/patchyj/jjwm-portfolio-client" target="_blank" rel="noopener noreferrer">
             here
         </a>
       </small>

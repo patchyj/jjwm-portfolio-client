@@ -22,7 +22,7 @@ const About = () => (
               unglamorous, monotonous and soul-destroying feeling of sitting at
               a desk at a job you hate knowing you could do more. So I started
               researching. I threw myself at YouTube and Udemy tutorials, hoping
-              to find something that I could make my own <a href="https://www.google.com">Ikigai</a>{' '}
+              to find something that I could make my own <a href="https://en.wikipedia.org/wiki/Ikigai" target="_blank" rel="noopener noreferrer">Ikigai</a>{' '}
               career of.
             </p>
             <p>
