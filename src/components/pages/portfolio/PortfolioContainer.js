@@ -58,8 +58,12 @@ class PortfolioContainer extends Component {
 }
 
 PortfolioContainer.propTypes = {
-  actions: PropTypes.shape({ getPosts: PropTypes.func }).isRequired,
-  projects: PropTypes.shape({}).isRequired,
+  actions: PropTypes.shape({ getProjects: PropTypes.func }).isRequired,
+  projects: PropTypes.shape({})
+};
+
+PortfolioContainer.defaultProps = {
+  projects: {}
 };
 
 function mapStateToProps(state) {

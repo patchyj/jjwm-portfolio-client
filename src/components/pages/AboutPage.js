@@ -6,7 +6,7 @@ const About = () => (
     <div className="jumbotron jumbotron-fluid">
       <div className="container">
         <div className="row">
-          <div className="col-md-8 offset-md-2 text-justify">
+          <div className="col-md-8 offset-md-2 text-justify p-3">
             <h3 className="py-4">A bit about me...</h3>
             <p>
               I never used to be interested in tech. Up until late 2016, my

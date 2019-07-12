@@ -27,17 +27,17 @@ const Navbar = () => {
             <Link to="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>Home</Link>
           </div>
           <div className="nav-item">
-            <Link to="/about" className={`nav-link ${pathname === '/about' ? 'active' : ''}`}>About</Link>
+            <Link to="/about" className={`nav-link ${pathname.includes('/about') ? 'active' : ''}`}>About</Link>
           </div>
           <div className="nav-item">
-            <Link to="/portfolio" className={`nav-link ${pathname === '/portfolio' ? 'active' : ''}`}>Portfolio</Link>
+            <Link to="/portfolio" className={`nav-link ${pathname.includes('/portfolio') ? 'active' : ''}`}>Portfolio</Link>
           </div>
           <div className="nav-item">
-            <Link to="/skills" className={`nav-link ${pathname === '/skills' ? 'active' : ''}`}>Skills</Link>
+            <Link to="/skills" className={`nav-link ${pathname.includes('/skills') ? 'active' : ''}`}>Skills</Link>
           </div>
-          <div className="nav-item">
-            <Link to="/posts" className={`nav-link ${pathname === '/posts' ? 'active' : ''}`}>Blog</Link>
-          </div>
+          {/* <div className="nav-item">
+            <Link to="/posts" className={`nav-link ${pathname.includes('/posts') ? 'active' : ''}`}>Blog</Link>
+          </div> */}
         </ul>
       </div>
     </nav>

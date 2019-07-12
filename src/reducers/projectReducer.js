@@ -10,7 +10,6 @@ import {
 } from '../actions/types';
 
 const initialState = {
-  projects: [],
   loading: false,
   errors: {}
 };
@@ -30,6 +29,24 @@ export default function (state = initialState, action) {
         projects: action.payload
       };
     case GET_PROJECTS_FAILURE:
+      return {
+        ...state,
+        loading: false,
+        errors: action.message
+      };
+    case GET_PROJECT_STARTED:
+      return {
+        ...state,
+        loading: true
+      };
+    case GET_PROJECT_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        errors: {},
+        project: action.payload
+      };
+    case GET_PROJECT_FAILURE:
       return {
         ...state,
         loading: false,

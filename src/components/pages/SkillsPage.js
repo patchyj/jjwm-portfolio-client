@@ -59,10 +59,7 @@ const Skills = () => {
         <div className="container">
           <h3 className="py-4">Skills</h3>
           <p className="my-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa modi
-            a omnis molestiae sequi voluptas vitae, dolor saepe minima dolores
-            molestias voluptatem minus officia ipsa numquam iste architecto
-            placeat perspiciatis.
+            If I'm not going morward, then I feel like I'm going backwards. These are just a few of the skills I've picked up in the 2.5 years since I started down this path and there's no shortage of things to learn. I definitely lean towards the front-end/UX-UI side of the industry, but building out APIs is highly satisfying too.
           </p>
           <div className="row">{bars}</div>
         </div>

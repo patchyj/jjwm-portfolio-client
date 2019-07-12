@@ -8,6 +8,7 @@ import Navbar from './layout/Navbar';
 import HomePage from './HomePage';
 import AboutPage from './pages/AboutPage';
 import PortfolioContainer from './pages/portfolio/PortfolioContainer';
+import PortfolioPiece from './pages/portfolio/PortfolioPiece';
 import SkillsPage from './pages/SkillsPage';
 import BlogContainer from './pages/blog/BlogContainer';
 
@@ -30,8 +31,9 @@ class App extends React.Component {
               <Route exact path="/" component={HomePage} />
               <Route exact path="/about" component={AboutPage} />
               <Route exact path="/portfolio" component={PortfolioContainer} />
+              <Route exact path="/portfolio/:id" component={PortfolioPiece} />
               <Route exact path="/skills" component={SkillsPage} />
-              <Route exact path="/posts" component={BlogContainer} />
+              {/* <Route exact path="/posts" component={BlogContainer} /> */}
             </Switch>
           </div>
         </div>

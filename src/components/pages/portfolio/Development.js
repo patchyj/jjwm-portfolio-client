@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import projectImages from '../../../images';
 import makeKey from '../../../utils/makeKey';
 
@@ -13,7 +14,6 @@ const Social = styled.h5`
     color: grey;
   }
 `;
-
 
 const Development = ({ projects }) => projects.map((project, i) => (
   <div className="row my-3" key={makeKey(project.name, i)}>
@@ -62,5 +62,13 @@ const Development = ({ projects }) => projects.map((project, i) => (
     </div>
   </div>
 ));
+
+Development.propTypes = {
+  projects: PropTypes.arrayOf(PropTypes.shape({}))
+};
+
+Development.defaultProps = {
+  projects: []
+};
 
 export default Development;

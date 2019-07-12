@@ -15,6 +15,7 @@ small {
   font-family: Courier, monospace;
   display: inline-block;
   margin-top: 5.5rem;
+  right: 0;
 }
 
 .typewriter-text {
@@ -27,6 +28,17 @@ small {
   font-weight: 700;
   border-right: 4px solid orange;
   box-sizing: border-box;
+}
+
+@media (max-width: 960px) {
+  .typewriter-text {
+    animation: none;
+    border-right: 0;
+
+    .hide-on-large {
+      display: block;
+    }
+  }
 }
 
 .hide-on-large {
@@ -96,8 +108,6 @@ small {
 }
 
 @media (max-width: 720px) {
-  height: auto;
-
   h1 {
     font-size: 20px;
   }

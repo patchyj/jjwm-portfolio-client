@@ -16,6 +16,29 @@ export function getProjectsQuery() {
             firstName
             lastName
           }
+          tags
+        }
+      }`
+  };
+}
+
+export function getProjectQuery(id) {
+  return {
+    query: `
+      query getProject {
+        project(id: "${id}") {
+          id
+          title
+          tagline
+          twitterURL
+          websiteURL
+          facebookURL
+          about
+          images
+          author {
+            firstName
+            lastName
+          }
         }
       }`
   };
