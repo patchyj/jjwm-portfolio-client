@@ -27,13 +27,13 @@ const HomePage = () => (
   <div className="container">
     <StyledSection className="section-1">
       <h1 className="display-4 text-right">
-          Jack
+        Jack
         <br />
-          McGregor
+        McGregor
       </h1>
       <div className="typewriter">
         <h4 className="typewriter-text text-muted">
-            Fullstack Developer <br className="hide-on-large" /> and Designer.
+          Fullstack Developer <br className="hide-on-large" /> and Designer.
         </h4>
       </div>
     </StyledSection>
@@ -68,13 +68,13 @@ const HomePage = () => (
         </a>
       </h1>
       <h5 className="recommend text-muted text-center mt-4">
-          Recommendations availbe on LinkedIn and on request
+        Recommendations availbe on LinkedIn and on request
       </h5>
       <hr />
       <small className="text-muted text-center">
-          Site built with NextJS and hosted on Heroku. See the code{' '}
+        Site built with React, Redux and hosted on Heroku. See the code{' '}
         <a href="https://github.com/patchyj/jjwm-portfolio-client" target="_blank" rel="noopener noreferrer">
-            here
+          here
         </a>
       </small>
     </StyledSection>
