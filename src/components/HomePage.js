@@ -33,13 +33,21 @@ const HomePage = () => (
     </S.StyledSection>
     <S.StyledSection className="section-3">
       <h1 className="social">
-        <a href="https://github.com/patchyj" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/patchyj"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fab fa-github" />
         </a>
         <a href="mailto:jackjwmcgregor@gmail.com">
           <i className="fas fa-envelope" />
         </a>
-        <a href="https://www.linkedin.com/in/jack-mcgregor/" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://www.linkedin.com/in/jack-mcgregor/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i className="fab fa-linkedin" />
         </a>
         <a href="/static/resume.pdf" download>
@@ -47,12 +55,16 @@ const HomePage = () => (
         </a>
       </h1>
       <h5 className="recommend text-muted text-center mt-4">
-        Recommendations availbe on LinkedIn and on request
+        Recommendations available on request
       </h5>
       <hr />
       <small className="text-muted text-center">
-        Site built with React, Redux and hosted on Heroku. See the code{' '}
-        <a href="https://github.com/patchyj/jjwm-portfolio-client" target="_blank" rel="noopener noreferrer">
+        Site built with React hosted on Heroku. See the code{' '}
+        <a
+          href="https://github.com/patchyj/jjwm-portfolio-client"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           here
         </a>
       </small>

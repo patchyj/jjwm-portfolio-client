@@ -3,33 +3,20 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
-import styled from 'styled-components';
 import Navbar from './layout/Navbar';
 import HomePage from './HomePage';
 import AboutPage from './pages/AboutPage';
 import PortfolioContainer from './pages/portfolio/PortfolioContainer';
 import PortfolioPiece from './pages/portfolio/PortfolioPiece';
 import SkillsPage from './pages/SkillsPage';
-
-const StyledApp = styled.nav`
-  [class*="col"] {
-    padding: 0;
-  }
-
-  .container {
-    padding:0;
-    .row {
-      margin:0;
-    }
-  }
-`;
+import S from './styledComponents';
 
 function App() {
   return (
-    <StyledApp className="container-fluid">
+    <S.StyledApp className="container-fluid">
       <div className="row">
         {/* SIDE NAV */}
-        <aside className="col-12 col-md-2 p-0" style={{ borderRight: '1px solid #ccc' }}>
+        <aside className="col-12 col-md-2 p-0">
           <Navbar />
         </aside>
         <div className="col">
@@ -39,11 +26,10 @@ function App() {
             <Route exact path="/portfolio" component={PortfolioContainer} />
             <Route exact path="/portfolio/:id" component={PortfolioPiece} />
             <Route exact path="/skills" component={SkillsPage} />
-            {/* <Route exact path="/posts" component={BlogContainer} /> */}
           </Switch>
         </div>
       </div>
-    </StyledApp>
+    </S.StyledApp>
   );
 }
 
