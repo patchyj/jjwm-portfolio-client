@@ -1,18 +1,11 @@
 .navbar {
+  padding:0;
   height: 100vh;
   text-align: center;
   position: fixed;
-}
-.navbar .nav-item {
-  margin-right: 0;
-}
 
-@media (max-width: 768px) {
-  .navbar {
-    z-index: 10;
-    height: 30px !important;
-    width: 100vw;
-    text-align: center;
-    position: relative;
-  }
 }
+.navbar-expand .navbar-collapse {
+  width: 16.6666666667%;
+}
+// 768 -> 720

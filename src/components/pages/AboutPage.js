@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
+import S from '../styledComponents';
 
 const About = () => (
-  <div>
+  <S.About>
     <div className="jumbotron jumbotron-fluid">
       <div className="container">
         <div className="row">
@@ -62,7 +63,7 @@ const About = () => (
         </div>
       </div>
     </div>
-  </div>
+  </S.About>
 );
 
 export default About;

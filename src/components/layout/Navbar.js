@@ -6,38 +6,21 @@ import './Navbar.scss';
 const Navbar = () => {
   const { pathname } = window.location;
   return (
-    <nav className="navbar navbar-expand navbar-light bg-light">
-      <button
-        className="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarColor03"
-        aria-controls="navbarColor03"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span className="navbar-toggler-icon" />
-      </button>
-
-      <div
-        className="collapse navbar-collapse justify-content-md-center"
-      >
-        <ul className="navbar-nav flex-md-column">
-          <div className="nav-item">
+    <nav className="navbar navbar-expand fixed-top flex-md-column flex-row align-items-start py-2">
+      <div className="collapse navbar-collapse">
+        <ul className="flex-md-column flex-row navbar-nav w-100 justify-content-between">
+          <li className="nav-item">
             <Link to="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`}>Home</Link>
-          </div>
-          <div className="nav-item">
+          </li>
+          <li className="nav-item">
             <Link to="/about" className={`nav-link ${pathname.includes('/about') ? 'active' : ''}`}>About</Link>
-          </div>
-          <div className="nav-item">
+          </li>
+          <li className="nav-item">
             <Link to="/portfolio" className={`nav-link ${pathname.includes('/portfolio') ? 'active' : ''}`}>Portfolio</Link>
-          </div>
-          <div className="nav-item">
+          </li>
+          <li className="nav-item">
             <Link to="/skills" className={`nav-link ${pathname.includes('/skills') ? 'active' : ''}`}>Skills</Link>
-          </div>
-          {/* <div className="nav-item">
-            <Link to="/posts" className={`nav-link ${pathname.includes('/posts') ? 'active' : ''}`}>Blog</Link>
-          </div> */}
+          </li>
         </ul>
       </div>
     </nav>

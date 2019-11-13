@@ -3,8 +3,12 @@ import styled from 'styled-components';
 import './HomePage.scss';
 
 const StyledSection = styled.div`
-  height: 100vh;
+  margin-bottom: 100px;
   position: relative;
+
+  /* @media (max-width: 960px) {
+    height: 300px;
+  } */
 `;
 
 const ParallaxContainer = styled.div`

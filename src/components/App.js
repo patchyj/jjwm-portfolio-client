@@ -10,11 +10,14 @@ import AboutPage from './pages/AboutPage';
 import PortfolioContainer from './pages/portfolio/PortfolioContainer';
 import PortfolioPiece from './pages/portfolio/PortfolioPiece';
 import SkillsPage from './pages/SkillsPage';
-import BlogContainer from './pages/blog/BlogContainer';
 
 const StyledApp = styled.nav`
-  [class*="col-"] {
+  [class*="col"] {
     padding: 0;
+  }
+
+  .container {
+    padding:0;
   }
 `;
 
@@ -23,10 +26,11 @@ class App extends React.Component {
     return (
       <StyledApp className="container-fluid">
         <div className="row">
-          <div className="col-md-2">
+          {/* SIDE NAV */}
+          <aside className="col-12 col-md-2 p-0" style={{ borderRight: '1px solid #ccc' }}>
             <Navbar />
-          </div>
-          <div className="col-md-10">
+          </aside>
+          <div className="col">
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/about" component={AboutPage} />

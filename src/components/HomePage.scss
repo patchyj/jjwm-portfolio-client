@@ -14,7 +14,7 @@ small {
 .typewriter {
   font-family: Courier, monospace;
   display: inline-block;
-  margin-top: 5.5rem;
+  margin: 5.5rem 0;
   right: 0;
 }
 
@@ -143,6 +143,43 @@ small {
     margin: auto;
     transform: none;
   }
+}
+
+@media (max-width: 450px) {
+  h1.display-4 {
+    font-size: 2.3rem;
+  }
+
+  h4 {
+  }
+
+  // .typewriter {
+  //   margin-top: 1.5rem;
+  //   display: inline;
+  // }
+
+  // .typewriter-text {
+  //   padding: 0;
+  //   margin-top: 0;
+  //   font-size: 15px;
+  //   animation: none;
+  // }
+
+  // .hide-on-large {
+  //   display: block;
+  // }
+
+  // .hide-on-small {
+  //   display: none;
+  // }
+
+  // .social,
+  // .recommend {
+  //   width: 100%;
+  //   padding-top: 5rem;
+  //   margin: auto;
+  //   transform: none;
+  // }
 }
 
 @media (max-width: 600px) {
