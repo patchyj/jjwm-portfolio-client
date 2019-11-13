@@ -82,29 +82,11 @@ small {
 .view1,
 .view2,
 .view3 {
-  background: url("../images/chimp-poster.jpg");
+  background: url('../images/chimp-poster.jpg');
 }
 
 .section-2 {
   color: grey;
-}
-
-.social,
-.recommend {
-  width: 300px;
-  padding-top: 40vh;
-  margin: auto;
-  transform: translateX(-35%);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.social a i {
-  transition: 0.2s;
-}
-.social a:hover i {
-  color: teal;
 }
 
 @media (max-width: 720px) {
@@ -134,14 +116,6 @@ small {
 
   .hide-on-small {
     display: none;
-  }
-
-  .social,
-  .recommend {
-    width: 100%;
-    padding-top: 5rem;
-    margin: auto;
-    transform: none;
   }
 }
 
