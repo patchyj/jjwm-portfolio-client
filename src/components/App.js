@@ -18,6 +18,9 @@ const StyledApp = styled.nav`
 
   .container {
     padding:0;
+    .row {
+      margin:0;
+    }
   }
 `;
 

@@ -1,6 +1,7 @@
+/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
-export const About = styled.div`
+export const Portfolio = styled.div`
   min-height: 100vh;
   padding: 1rem;
   box-sizing:border-box;
@@ -8,9 +9,4 @@ export const About = styled.div`
   .jumbotron {
     background:none;
   }
-  .row {
-    padding: 1rem
-  }
 `;
-
-export const Title = styled.div``;

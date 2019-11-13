@@ -1,35 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+import S from './styledComponents';
 import './HomePage.scss';
-
-const StyledSection = styled.div`
-  margin-bottom: 100px;
-  position: relative;
-
-  /* @media (max-width: 960px) {
-    height: 300px;
-  } */
-`;
-
-const ParallaxContainer = styled.div`
-  display: flex;
-  max-width: 960px;
-  margin: 0 auto;
-
-  .view1 {
-    border-radius: 130px 130px 0 130px
-  }
-  .view2 {
-    border-radius: 0 130px 0 130px
-  }
-  .view3 {
-    border-radius: 0 130px 130px 130px
-  }
-`;
 
 const HomePage = () => (
   <div className="container">
-    <StyledSection className="section-1">
+    <S.StyledSection className="section-1">
       <h1 className="display-4 text-right">
         Jack
         <br />
@@ -40,9 +15,9 @@ const HomePage = () => (
           Fullstack Developer <br className="hide-on-large" /> and Designer.
         </h4>
       </div>
-    </StyledSection>
-    <StyledSection className="section-2 hide-on-small">
-      <ParallaxContainer>
+    </S.StyledSection>
+    <S.StyledSection className="section-2 hide-on-small">
+      <S.ParallaxContainer>
         <div className="window">
           <div className="view view1 left" id="view1" />
         </div>
@@ -54,9 +29,9 @@ const HomePage = () => (
         <div className="window">
           <div className="view view3 right" id="view3" />
         </div>
-      </ParallaxContainer>
-    </StyledSection>
-    <StyledSection className="section-3">
+      </S.ParallaxContainer>
+    </S.StyledSection>
+    <S.StyledSection className="section-3">
       <h1 className="social">
         <a href="https://github.com/patchyj" target="_blank" rel="noopener noreferrer">
           <i className="fab fa-github" />
@@ -81,7 +56,7 @@ const HomePage = () => (
           here
         </a>
       </small>
-    </StyledSection>
+    </S.StyledSection>
   </div>
 );
 

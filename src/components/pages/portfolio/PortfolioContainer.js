@@ -9,6 +9,7 @@ import './PortfolioContainer.scss';
 import Development from './Development';
 import Design from './Design';
 import * as projectActions from '../../../actions/projects/projectActions';
+import S from '../../styledComponents';
 
 class PortfolioContainer extends Component {
   constructor() {
@@ -35,7 +36,7 @@ class PortfolioContainer extends Component {
     const { projects: { projects: projectsList } } = this.props;
 
     return (
-      <div>
+      <S.Portfolio>
         <div className="jumbotron jumbotron-fluid">
           <div className="container">
             <h3 className="py-4">Portfolio</h3>
@@ -52,7 +53,7 @@ class PortfolioContainer extends Component {
             {!dev && <Design projects={projectsList} />}
           </div>
         </div>
-      </div>
+      </S.Portfolio>
     );
   }
 }

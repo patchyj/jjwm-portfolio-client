@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import uuidv1 from 'uuid/v1';
+import S from '../styledComponents';
 
 const skills = [
   { name: 'HTML', level: 90 },
@@ -26,11 +26,6 @@ const skills = [
   { name: 'Sketch', level: 70 }
 ];
 
-const StyledProgressBar = styled.div`
-  border-radius: 20px;
-  background: linear-gradient(45deg, #e66465, #9198e5);
-`;
-
 const Skills = () => {
   const bars = skills.map(skill => (
     <div className="col-md-4 col-sm-6 p-2" key={uuidv1()}>
@@ -39,7 +34,7 @@ const Skills = () => {
           <label htmlFor="html">{skill.name}</label>
         </div>
         <div className="col-md-8 progress">
-          <StyledProgressBar
+          <S.StyledProgressBar
             name="html"
             role="progressbar"
             style={{
@@ -53,8 +48,9 @@ const Skills = () => {
       </div>
     </div>
   ));
+
   return (
-    <div>
+    <S.SkillsWrapper>
       <div className="mt-5">
         <div className="container">
           <h3 className="py-4">Skills</h3>
@@ -64,7 +60,7 @@ const Skills = () => {
           <div className="row">{bars}</div>
         </div>
       </div>
-    </div>
+    </S.SkillsWrapper>
   );
 };
 
