@@ -1,1 +1,1 @@
-export default (arg, index) => `${arg.replace(' ', '_')}__${index}`;
+export default (arg, index) => `${arg.trim().replace(/\s/g, '_')}__${index}`;
