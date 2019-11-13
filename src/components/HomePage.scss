@@ -67,7 +67,7 @@ small {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  // background-position: center center;
   background-attachment: fixed;
 }
 
@@ -82,7 +82,7 @@ small {
 .view1,
 .view2,
 .view3 {
-  background: url('../images/chimp-poster.jpg');
+  background: url("../images/chimp-poster.jpg");
 }
 
 .section-2 {

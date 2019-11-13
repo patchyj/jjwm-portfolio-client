@@ -1,6 +1,5 @@
 require('dotenv').config({ path: `${__dirname}/.env` });
 
-// console.log(process.env);
 export default {
   PORT: process.env.REACT_APP_PORT,
   NODE_ENV: process.env.NODE_ENV,
