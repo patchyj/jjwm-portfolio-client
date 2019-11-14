@@ -22,3 +22,5 @@ Root.propTypes = {
   store: PropTypes.shape({}).isRequired,
   history: PropTypes.shape({}).isRequired
 };
+
+// If seeing "Could not freeze: ..." error in terminal, run `rm -r node_modules/.cache/hard-source/`

@@ -54,7 +54,9 @@ const Skills = () => {
         <div className="container">
           <h3 className="py-4">Skills</h3>
           <p className="my-5">
-            If I'm not going forward, then I feel like I'm going backwards. These are just a few of the skills I've picked up in the 2.5 years since I started down this path and there's no shortage of things to learn. I definitely lean towards the front-end/UX-UI side of the industry, but building out APIs is highly satisfying too.
+            If I'm not going forward, then I feel like I'm going backwards.
+            These are just a few of the skills I've picked up in the 2.5 years
+            since I started down this path and there's no shortage of things to learn..
           </p>
           <div className="row">{bars}</div>
         </div>
