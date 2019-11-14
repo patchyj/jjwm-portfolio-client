@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { baseURL } from '../../utils/baseURL';
+import baseURL from '../../utils/baseURL';
 import {
   GET_USERS_STARTED,
   GET_USERS_SUCCESS,

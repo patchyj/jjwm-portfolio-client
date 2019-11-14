@@ -9,7 +9,7 @@ import {
   GET_PROJECT_FAILURE
 } from '../types';
 import { getProjectsQuery, getProjectQuery } from './projectQueries';
-import { baseURL } from '../../utils/baseURL';
+import baseURL from '../../utils/baseURL';
 
 export const getProjects = () => (dispatch) => {
   dispatch({ type: GET_PROJECTS_STARTED });

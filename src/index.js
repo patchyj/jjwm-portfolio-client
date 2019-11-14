@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
-import axios from 'axios';
 import configureStore, { history } from './store/configureStore';
 import './styles/bootswatch.min.css';
 import Root from './components/Root';
@@ -9,11 +8,6 @@ import Root from './components/Root';
 require('./favicon.ico');
 // Tell webpack to load favicon.ico
 const store = configureStore();
-
-setInterval(
-  () => axios.get('https://jjwm-portfolio-api.herokuapp.com/test'),
-  60000
-);
 
 render(
   <AppContainer>

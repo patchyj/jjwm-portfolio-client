@@ -19,7 +19,6 @@ const skills = [
   { name: 'REST', level: 65 },
   { name: 'Apollo', level: 65 },
   { name: 'Pasport', level: 65 },
-  { name: 'Puns', level: 100 },
   { name: 'NodeJS', level: 65 },
   { name: 'Photoshop', level: 70 },
   { name: 'Illustrator', level: 75 },

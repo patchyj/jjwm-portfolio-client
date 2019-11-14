@@ -2,7 +2,7 @@
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import setAuthToken from '../../utils/setAuthToken';
-import { baseURL } from '../../utils/baseURL';
+import baseURL from '../../utils/baseURL';
 import {
   registerUserQuery,
   loginUserQuery,

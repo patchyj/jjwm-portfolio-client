@@ -6,7 +6,7 @@ import {
   GET_POSTS_FAILURE
 } from '../types';
 import { getPostsQuery } from './postQueries';
-import { baseURL } from '../../utils/baseURL';
+import baseURL from '../../utils/baseURL';
 
 export const getPosts = () => (dispatch) => {
   dispatch({ type: GET_POSTS_STARTED });
