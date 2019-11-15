@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import S from '../styledComponents';
+import S from '../../styledComponents';
 
 const About = () => (
   <S.About>

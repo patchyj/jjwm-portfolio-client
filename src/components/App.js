@@ -3,13 +3,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { hot } from 'react-hot-loader';
-import Navbar from './layout/Navbar';
+import Navbar from './layout/NavConnect';
 import HomePage from './HomePage';
-import AboutPage from './pages/AboutPage';
+import About from './pages/about/About';
 import PortfolioContainer from './pages/portfolio/PortfolioContainer';
 import PortfolioPiece from './pages/portfolio/PortfolioPiece';
-import SkillsPage from './pages/SkillsPage';
+import Skills from './pages/skills/Skills';
 import S from './styledComponents';
+import skillsList from './pages/skills/skillsList.json';
 
 function App() {
   return (
@@ -22,10 +23,14 @@ function App() {
         <div className="col">
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/about" component={About} />
             <Route exact path="/portfolio" component={PortfolioContainer} />
             <Route exact path="/portfolio/:id" component={PortfolioPiece} />
-            <Route exact path="/skills" component={SkillsPage} />
+            <Route
+              exact
+              path="/skills"
+              render={props => <Skills {...props} skillsList={skillsList} />}
+            />
           </Switch>
         </div>
       </div>

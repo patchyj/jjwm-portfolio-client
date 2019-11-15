@@ -1,0 +1,22 @@
+[
+  { "name": "HTML", "level": 90 },
+  { "name": "(S)CSS", "level": 90 },
+  { "name": "Javascript", "level": 75 },
+  { "name": "SQL", "level": 65 },
+  { "name": "Mongo", "level": 60 },
+  { "name": "Docker", "level": 45 },
+  { "name": "React", "level": 75 },
+  { "name": "NextJS", "level": 50 },
+  { "name": "Jenkins", "level": 40 },
+  { "name": "Ruby", "level": 70 },
+  { "name": "Rails", "level": 70 },
+  { "name": "NodeJS", "level": 65 },
+  { "name": "GraphQL", "level": 65 },
+  { "name": "REST", "level": 65 },
+  { "name": "Apollo", "level": 65 },
+  { "name": "Pasport", "level": 65 },
+  { "name": "NodeJS", "level": 65 },
+  { "name": "Photoshop", "level": 70 },
+  { "name": "Illustrator", "level": 75 },
+  { "name": "Sketch", "level": 70 }
+]
