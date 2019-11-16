@@ -18,5 +18,12 @@
   { "name": "NodeJS", "level": 65 },
   { "name": "Photoshop", "level": 70 },
   { "name": "Illustrator", "level": 75 },
-  { "name": "Sketch", "level": 70 }
+  { "name": "Sketch", "level": 70 },
+  { "name": "Jest", "level": 75 },
+  { "name": "Enzyme", "level": 60 },
+  { "name": "Bash Scripting", "level": 50 },
+  { "name": "Jenkins", "level": 50 },
+  { "name": "Angular", "level": 55 },
+  { "name": "React Native", "level": 25 },
+  { "name": "Python", "level": 40 }
 ]
