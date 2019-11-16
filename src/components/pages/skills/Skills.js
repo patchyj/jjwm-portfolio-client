@@ -1,11 +1,14 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable operator-linebreak */
 import React from 'react';
 import uuidv1 from 'uuid/v1';
 import PropTypes from 'prop-types';
 import S from '../../styledComponents';
 
 const Skills = ({ skillsList }) => {
-  const bars =    skillsList
-    && skillsList.map(skill => (
+  const bars =
+    skillsList &&
+    skillsList.map(skill => (
       <div className="col-md-4 col-sm-6 p-2" key={uuidv1()}>
         <div className="row m-0">
           <div className="col-md-4">
@@ -45,7 +48,7 @@ const Skills = ({ skillsList }) => {
   );
 };
 
-Skills.propType = {
+Skills.propTypes = {
   skillsList: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,

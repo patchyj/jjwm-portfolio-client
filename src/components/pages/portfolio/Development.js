@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 import React from 'react';
 import PropTypes from 'prop-types';
 import projectImages from '../../../images';
@@ -5,8 +6,9 @@ import makeKey from '../../../utils/makeKey';
 import S from '../../styledComponents';
 
 const Development = ({ projects }) => {
-  const projectsList =    projects
-    && projects.map((project, i) => (
+  const projectsList =
+    projects &&
+    projects.map((project, i) => (
       <div className="row my-3" key={makeKey(project.name, i)}>
         <div className="col-md-4 image">
           <a href={project.url} target="_blank" rel="noopener noreferrer">
