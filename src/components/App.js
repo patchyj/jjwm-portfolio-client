@@ -9,8 +9,10 @@ import About from './pages/about/About';
 import PortfolioContainer from './pages/portfolio/PortfolioContainer';
 import PortfolioPiece from './pages/portfolio/PortfolioPiece';
 import Skills from './pages/skills/Skills';
+import Experience from './pages/experience/Experience';
 import S from './styledComponents';
 import skillsList from './pages/skills/skillsList.json';
+import expList from './pages/experience/experienceList.json';
 
 function App() {
   return (
@@ -30,6 +32,11 @@ function App() {
               exact
               path="/skills"
               render={props => <Skills {...props} skillsList={skillsList} />}
+            />
+            <Route
+              exact
+              path="/experience"
+              render={props => <Experience {...props} expList={expList} />}
             />
           </Switch>
         </div>

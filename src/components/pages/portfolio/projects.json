@@ -2,7 +2,7 @@
   {
     "name": "Circle of Intrapreneurs",
     "image": "circleofintrapreneurs.png",
-    "description": "The Circle of Intrapreneurs is an organistion aimed at getting those in big business involved in helping their companies to help the world, by driving social, environmental and economic change. This site was the end of Phase 1, an MVP of a basic social media platform.",
+    "description": "The Circle of Intrapreneurs is an organisation aimed at getting those in big business involved in helping their companies to help the world, by driving social, environmental and economic change. This site was the end of Phase 1, an MVP of a basic social media platform.",
     "url": "https://www.circleofintrapreneurs.com",
     "github": "https://www.circleofintrapreneurs.com",
     "twitter": "https://www.circleofintrapreneurs.com",
@@ -14,7 +14,7 @@
   {
     "name": "React Front to Back",
     "image": "react-f2b.png",
-    "description": "This site was built as an extension to a simple React Fron to Back Tuorial by Brad Traversy, a brilliant YouTube tutor. The tutorial itself stepped through the basics with the Context API, after which I carried on building it out and styling it",
+    "description": "This site was built as an extension to a simple React Front to Back Tutorial by Brad Traversy, a brilliant YouTube tutor. The tutorial itself stepped through the basics with the Context API, after which I carried on building it out and styling it",
     "url": "https://patchyj.github.io/React-F2B/",
     "github": "https://github.com/patchyj/React-F2B",
     "twitter": "",

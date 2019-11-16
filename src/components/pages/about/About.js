@@ -17,7 +17,7 @@ const About = () => (
               than keys on a computer.
             </p>
             <p>
-              But that all changed in 2017 when I was wokring a dead-end job in
+              But that all changed in 2017 when I was working a dead-end job in
               Edinburgh. It was my first job after nearly four years of
               traveling around the world, and I was woefully unprepared for the
               unglamorous, monotonous and soul-destroying feeling of sitting at

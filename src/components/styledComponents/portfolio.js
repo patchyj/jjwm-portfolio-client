@@ -46,3 +46,14 @@ export const Image = styled.img`
   filter: brightness(30%);
   padding: 5px;
 `;
+
+export const Social = styled.h5`
+  a {
+    padding-right: 10px;
+    transition: 0.2s;
+  }
+
+  a:hover {
+    color: grey;
+  }
+`;

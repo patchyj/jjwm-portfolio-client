@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExpItem should render with link if companyUrl present 1`] = `Object {}`;
