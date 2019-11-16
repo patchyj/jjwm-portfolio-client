@@ -7,7 +7,6 @@ import Navbar from './layout/NavConnect';
 import HomePage from './HomePage';
 import About from './pages/about/About';
 import PortfolioContainer from './pages/portfolio/PortfolioContainer';
-import PortfolioPiece from './pages/portfolio/PortfolioPiece';
 import Skills from './pages/skills/Skills';
 import Experience from './pages/experience/Experience';
 import S from './styledComponents';
@@ -27,7 +26,6 @@ function App() {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/about" component={About} />
             <Route exact path="/portfolio" component={PortfolioContainer} />
-            <Route exact path="/portfolio/:id" component={PortfolioPiece} />
             <Route
               exact
               path="/skills"
