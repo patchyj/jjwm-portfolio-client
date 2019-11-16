@@ -1,11 +1,16 @@
 import React from 'react';
-import Loader from '../../shared/Loader';
+import PDFViewer from '../../shared/PDFViewer';
 
 const Design = () => (
   <div className="row p-3">
-    <h4>Coming soon</h4>
-    <Loader width="200" name="pikachu" />
-    <Loader width="200" name="pokeball" />
+    <PDFViewer url="../../../images/wireframes/bloomBirths.pdf" width={200} />
+    <PDFViewer url="../../../images/wireframes/Portfolio v1.pdf" width={200} />
+    <PDFViewer url="../../../images/wireframes/Portfolio v2.pdf" width={200} />
+    <PDFViewer url="../../../images/wireframes/Portfolio v3.pdf" width={200} />
+    <PDFViewer
+      url="../../../images/wireframes/Oddjob dashboard.pdf"
+      width={200}
+    />
   </div>
 );
 
