@@ -12,7 +12,14 @@ export default {
     }
   },
   node: {
-    fs: 'empty'
+    child_process: 'empty',
+    dgram: 'empty',
+    dns: 'mock',
+    fs: 'empty',
+    http2: 'empty',
+    module: 'empty',
+    net: 'empty',
+    tls: 'empty'
   },
   devtool: 'cheap-module-eval-source-map', // more info:https://webpack.js.org/guides/development/#using-source-maps and https://webpack.js.org/configuration/devtool/
   entry: [
@@ -36,7 +43,8 @@ export default {
     new HardSourceWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new HtmlWebpackPlugin({ // Create HTML file that includes references to bundled CSS and JS.
+    new HtmlWebpackPlugin({
+      // Create HTML file that includes references to bundled CSS and JS.
       template: 'src/index.ejs',
       minify: {
         removeComments: true,
@@ -112,15 +120,15 @@ export default {
             options: {
               sourceMap: true
             }
-          }, {
+          },
+          {
             loader: 'postcss-loader',
             options: {
-              plugins: () => [
-                require('autoprefixer')
-              ],
+              plugins: () => [require('autoprefixer')],
               sourceMap: true
             }
-          }, {
+          },
+          {
             loader: 'sass-loader',
             options: {
               includePaths: [path.resolve(__dirname, 'src')],
