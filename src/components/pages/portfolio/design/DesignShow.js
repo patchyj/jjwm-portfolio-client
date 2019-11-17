@@ -1,9 +1,15 @@
+/* eslint-disable operator-linebreak */
+/* eslint-disable no-multi-spaces */
 import React, { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import S from '../../../styledComponents';
 import PDFViewer from '../../../shared/PDFViewer';
 import designList from './designList.json';
+import config from '../../../../../config';
+
+const prefix =
+  config.NODE_ENV !== 'production' ? '../../../images/wireframes' : '';
 
 const DesignShow = ({ url, id, ...props }) => {
   useEffect(() => {
@@ -24,7 +30,7 @@ const DesignShow = ({ url, id, ...props }) => {
       </div>
       <div className="col-8 column">
         <PDFViewer
-          url={piece && piece.url}
+          url={piece && `${prefix}${piece.url}`}
           id={piece && piece.id}
           showall
           outline={piece && piece.outline}
