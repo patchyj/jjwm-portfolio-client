@@ -6,8 +6,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import data from './projects.json';
 import './PortfolioContainer.scss';
-import Development from './Development';
-import Design from './Design';
+import Development from './dev/Development';
+import Design from './design/Design';
 import * as projectActions from '../../../actions/projects/projectActions';
 import S from '../../styledComponents';
 
@@ -33,7 +33,9 @@ class PortfolioContainer extends Component {
 
   render() {
     const { dev } = this.state;
-    const { projects: { projects: projectsList } } = this.props;
+    const {
+      projects: { projects: projectsList }
+    } = this.props;
 
     return (
       <S.Portfolio>
@@ -41,11 +43,17 @@ class PortfolioContainer extends Component {
           <div className="container">
             <h3 className="py-4">Portfolio</h3>
             <h4 className="m-0 py-5">
-              <span className={!dev ? 'text-muted' : ''} onClick={this.onChangeDev}>
+              <span
+                className={!dev ? 'text-muted' : ''}
+                onClick={this.onChangeDev}
+              >
                 DEV
               </span>{' '}
               |{' '}
-              <span className={dev ? 'text-muted' : ''} onClick={this.onChangeDev}>
+              <span
+                className={dev ? 'text-muted' : ''}
+                onClick={this.onChangeDev}
+              >
                 DESIGN
               </span>
             </h4>
@@ -82,7 +90,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PortfolioContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(PortfolioContainer);

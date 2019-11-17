@@ -1,9 +1,9 @@
 /* eslint-disable operator-linebreak */
 import React from 'react';
 import PropTypes from 'prop-types';
-import projectImages from '../../../images';
-import makeKey from '../../../utils/makeKey';
-import S from '../../styledComponents';
+import projectImages from '../../../../images';
+import makeKey from '../../../../utils/makeKey';
+import S from '../../../styledComponents';
 
 const Development = ({ projects }) => {
   const projectsList =

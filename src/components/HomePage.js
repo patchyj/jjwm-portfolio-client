@@ -1,7 +1,7 @@
 import React from 'react';
 import S from './styledComponents';
 import './HomePage.scss';
-import Footer from './shared/Footer';
+import Footer from './layout/Footer';
 
 const HomePage = () => (
   <div className="container">
