@@ -1,3 +1,5 @@
+/* eslint-disable object-curly-newline */
+/* eslint-disable no-trailing-spaces */
 /* eslint-disable no-plusplus */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -6,7 +8,7 @@ import PropTypes from 'prop-types';
 import uuidv2 from 'uuid/v1';
 import S from '../styledComponents';
 
-const PDFViewer = ({ url, id, showall }) => {
+const PDFViewer = ({ url, id, showall, outline }) => {
   const [pageNumber] = useState(1);
   const [numPages, setNumPages] = useState(null);
   const list = [];
@@ -25,7 +27,7 @@ const PDFViewer = ({ url, id, showall }) => {
     }
   }
   return (
-    <S.PDFViewer>
+    <S.PDFViewer outline={outline}>
       <Link to={`/portfolio/${id}`}>
         <Document
           file={url}
@@ -49,11 +51,13 @@ const PDFViewer = ({ url, id, showall }) => {
 PDFViewer.propTypes = {
   url: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
-  showall: PropTypes.bool
+  showall: PropTypes.bool,
+  outline: PropTypes.bool
 };
 
 PDFViewer.defaultProps = {
-  showall: false
+  showall: false,
+  outline: false
 };
 
 export default PDFViewer;

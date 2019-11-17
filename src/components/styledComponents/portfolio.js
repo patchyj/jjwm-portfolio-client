@@ -90,10 +90,11 @@ export const PDFViewer = styled.div`
   transition: 0.1s;
   max-width: 400px;
 
-  &:hover {
+  /* &:hover {
     box-shadow: 0 5px 9px 0px #555;
-  }
+  } */
   .pdf-page {
+    outline: ${props => (props.outline ? '1px solid grey' : '')};
     margin-top: 8px;
     vertical-align: middle;
   }
@@ -113,6 +114,12 @@ export const DesignShow = styled.div`
     padding-right: 8px;
     box-sizing: border-box;
     justify-content: center;
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+      margin-bottom: 10px;
+    }
 
     .piece-container {
       height: 100vh;

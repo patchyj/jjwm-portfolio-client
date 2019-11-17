@@ -23,7 +23,12 @@ const DesignShow = ({ url, id, ...props }) => {
         </div>
       </div>
       <div className="col-8 column">
-        <PDFViewer url={piece.url} id={piece.id} showall />
+        <PDFViewer
+          url={piece && piece.url}
+          id={piece && piece.id}
+          showall
+          outline={piece && piece.outline}
+        />
       </div>
     </S.DesignShow>
   );
