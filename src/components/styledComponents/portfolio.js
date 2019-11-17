@@ -114,19 +114,21 @@ export const DesignShow = styled.div`
     box-sizing: border-box;
     justify-content: center;
 
-    canvas {
-      width: 100% !important;
-      height: auto !important;
-    }
-
-    .description {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      align-items: center;
+    .piece-container {
       height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: fixed;
-      width: 280px;
+
+      .description {
+        width: 280px;
+
+        h1 {
+          padding: 0;
+          text-align: left;
+        }
+      }
     }
   }
 `;

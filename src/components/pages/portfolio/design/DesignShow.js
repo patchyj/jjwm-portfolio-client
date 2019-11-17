@@ -15,9 +15,11 @@ const DesignShow = ({ url, id, ...props }) => {
   return (
     <S.DesignShow className="row">
       <div className="col-md-4 column">
-        <div className="description">
-          <h1>{piece && piece.title}</h1>
-          <p>{piece && piece.description}</p>
+        <div className="piece-container">
+          <div className="description">
+            <h1>{piece && piece.title}</h1>
+            <p>{piece && piece.description}</p>
+          </div>
         </div>
       </div>
       <div className="col-8 column">
