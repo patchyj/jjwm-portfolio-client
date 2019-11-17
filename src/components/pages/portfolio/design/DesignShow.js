@@ -11,7 +11,7 @@ const DesignShow = ({ url, id, ...props }) => {
   });
   const { params } = props.match;
   const piece = designList.find(el => el.id === params.id);
-  console.log(piece);
+
   return (
     <S.DesignShow className="row">
       <div className="col-md-4 column">
@@ -36,12 +36,16 @@ const DesignShow = ({ url, id, ...props }) => {
 
 DesignShow.propTypes = {
   url: PropTypes.string,
-  id: PropTypes.string
+  id: PropTypes.string,
+  match: PropTypes.shape({
+    params: PropTypes.shape({})
+  })
 };
 
 DesignShow.defaultProps = {
   url: '',
-  id: ''
+  id: '',
+  match: {}
 };
 
 export default withRouter(DesignShow);
