@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import maxWidth from './breakpoints';
 
 export const Portfolio = styled.div`
   min-height: 100vh;
@@ -55,5 +56,77 @@ export const Social = styled.h5`
 
   a:hover {
     color: grey;
+  }
+`;
+
+export const DesignGallery = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+
+  .column {
+    flex: 33.3333333%;
+    padding-right: 8px;
+    box-sizing: border-box;
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+
+  @media (max-width: ${maxWidth.medium}) {
+    .column {
+      flex: 50%;
+    }
+  }
+  @media (max-width: ${maxWidth.small}) {
+    .column {
+      flex: 100%;
+    }
+  }
+`;
+
+export const PDFViewer = styled.div`
+  transition: 0.1s;
+  max-width: 400px;
+
+  &:hover {
+    box-shadow: 0 5px 9px 0px #555;
+  }
+  .pdf-page {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+`;
+
+export const DesignShow = styled.div`
+  box-sizing: border-box;
+  padding: 1rem;
+
+  &.row {
+    margin: 0;
+  }
+
+  .column {
+    display: flex;
+    flex: 80%;
+    padding-right: 8px;
+    box-sizing: border-box;
+    justify-content: center;
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      align-items: center;
+      height: 100vh;
+      position: fixed;
+      width: 280px;
+    }
   }
 `;
