@@ -7,7 +7,6 @@ import Navbar from './layout/NavConnect';
 import HomePage from './HomePage';
 import About from './pages/about/About';
 import PortfolioContainer from './pages/portfolio/PortfolioContainer';
-import DesignShow from './pages/portfolio/design/DesignShow';
 import Skills from './pages/skills/Skills';
 import Experience from './pages/experience/Experience';
 import S from './styledComponents';

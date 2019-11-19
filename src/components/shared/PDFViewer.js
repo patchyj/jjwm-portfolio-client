@@ -2,7 +2,6 @@
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable no-plusplus */
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Document, Page } from 'react-pdf';
 import PropTypes from 'prop-types';
 import uuidv2 from 'uuid/v1';
@@ -48,7 +47,6 @@ const PDFViewer = ({ url, showall, outline }) => {
 
 PDFViewer.propTypes = {
   url: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   showall: PropTypes.bool,
   outline: PropTypes.bool
 };

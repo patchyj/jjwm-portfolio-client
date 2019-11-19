@@ -1,12 +1,12 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { Component, useState } from 'react';
+import React from 'react';
 import {
   Switch,
   Route,
   useRouteMatch,
   Link,
-  useParams,
   withRouter
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -20,7 +20,6 @@ import * as projectActions from '../../../actions/projects/projectActions';
 import S from '../../styledComponents';
 
 const PortfolioContainer = ({ location }) => {
-  const [dev] = useState(true);
   const match = useRouteMatch();
   const { pathname } = location;
   const currentPage = page => pathname.includes(page);
@@ -66,11 +65,13 @@ const PortfolioContainer = ({ location }) => {
 
 PortfolioContainer.propTypes = {
   actions: PropTypes.shape({ getProjects: PropTypes.func }).isRequired,
-  projects: PropTypes.shape({})
+  projects: PropTypes.shape({}),
+  location: PropTypes.shape({})
 };
 
 PortfolioContainer.defaultProps = {
-  projects: {}
+  projects: {},
+  location: {}
 };
 
 function mapStateToProps(state) {

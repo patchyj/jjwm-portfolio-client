@@ -11,13 +11,12 @@ import config from '../../../../../config';
 const prefix =
   config.NODE_ENV !== 'production' ? '../../../images/wireframes' : '';
 
-const DesignShow = ({ url, id }) => {
+const DesignShow = () => {
   useEffect(() => {
     document.title = 'Jack McGregor | Design';
   });
   const { designId } = useParams();
   const piece = designList.find(el => el.id === designId);
-  console.log(`${prefix}${piece.url}`);
 
   return (
     <S.DesignShow className="row">
@@ -42,16 +41,12 @@ const DesignShow = ({ url, id }) => {
 };
 
 DesignShow.propTypes = {
-  url: PropTypes.string,
-  id: PropTypes.string,
   match: PropTypes.shape({
     params: PropTypes.shape({})
   })
 };
 
 DesignShow.defaultProps = {
-  url: '',
-  id: '',
   match: {}
 };
 

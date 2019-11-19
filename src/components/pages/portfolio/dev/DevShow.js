@@ -7,7 +7,7 @@ import projectImages from '../../../../images';
 function DevShow({ projects }) {
   const { devId } = useParams();
   const project = projects.find(p => p.id === devId);
-  console.log(project);
+
   return (
     <div className="row">
       <div className="col-md-8">

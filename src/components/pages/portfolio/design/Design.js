@@ -14,7 +14,6 @@ const prefix =
 
 const Design = () => {
   const match = useRouteMatch();
-  console.log(`${match.url}/${designList[1].id}`);
   const gallery = (
     <S.DesignGallery>
       <div className="column">
