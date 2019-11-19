@@ -8,13 +8,7 @@
     "github": "https://www.circleofintrapreneurs.com",
     "twitter": "https://www.circleofintrapreneurs.com",
     "facebook": "https://www.circleofintrapreneurs.com",
-    "tech": [
-      "React",
-      "Redux",
-      "Express",
-      "NodeJS",
-      "SCSS"
-    ],
+    "tech": ["React", "Redux", "Express", "NodeJS", "SCSS"],
     "from": "March 18",
     "to": "Jan 19"
   },
@@ -27,12 +21,7 @@
     "github": "https://github.com/patchyj/React-F2B",
     "twitter": "",
     "facebook": "",
-    "tech": [
-      "React",
-      "JSON Placeholder",
-      "SCSS",
-      "Bootstrap"
-    ],
+    "tech": ["React", "JSON Placeholder", "SCSS", "Bootstrap"],
     "from": "Sept 18",
     "to": ""
   },
@@ -41,17 +30,11 @@
     "name": "React and Redux",
     "image": "react-redux.png",
     "description": "Similarly to the React Front to Back site above, this one brought in Redux as its state management tool, with Redux Thunk to manage asynchronous requests. I got carried away with the parallax effect on the home page but I'm not sorry about it",
-    "url": "https://patchyj.github.io/React-F2B-Redux/",
+    "url": "https://react-f2b-redux.herokuapp.com/",
     "github": "https://github.com/patchyj/React-F2B-Redux",
     "twitter": "",
     "facebook": "",
-    "tech": [
-      "React",
-      "Redux",
-      "JSON Placeholder",
-      "SCSS",
-      "Bootstrap"
-    ],
+    "tech": ["React", "Redux", "JSON Placeholder", "SCSS", "Bootstrap"],
     "from": "Oct 18",
     "to": ""
   },
@@ -64,10 +47,7 @@
     "github": "https://www.circleofintrapreneurs.com",
     "twitter": "https://www.circleofintrapreneurs.com",
     "facebook": "https://www.circleofintrapreneurs.com",
-    "tech": [
-      "HTML",
-      "CSS"
-    ],
+    "tech": ["HTML", "CSS"],
     "from": "Aug 18",
     "to": ""
   },
@@ -80,13 +60,7 @@
     "github": "https://www.circleofintrapreneurs.com",
     "twitter": "",
     "facebook": "",
-    "tech": [
-      "AngularJS",
-      "Tachyons",
-      "SCSS",
-      "ExpressJS",
-      "NodeJS"
-    ],
+    "tech": ["AngularJS", "Tachyons", "SCSS", "ExpressJS", "NodeJS"],
     "from": "June 17",
     "to": ""
   },
@@ -99,11 +73,7 @@
     "github": "https://github.com/patchyj/poker",
     "twitter": "",
     "facebook": "",
-    "tech": [
-      "HTML",
-      "Javscript ES6+",
-      "SCSS"
-    ],
+    "tech": ["HTML", "Javscript ES6+", "SCSS"],
     "from": "Nov 18",
     "to": ""
   }

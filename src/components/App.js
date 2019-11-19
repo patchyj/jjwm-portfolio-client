@@ -28,8 +28,6 @@ function App() {
             <Route path="/portfolio">
               <PortfolioContainer />
             </Route>
-            {/* <Route path="/portfolio" component={PortfolioContainer} />
-            <Route path="/portfolio/:id" component={DesignShow} /> */}
             <Route
               path="/skills"
               render={props => <Skills {...props} skillsList={skillsList} />}
