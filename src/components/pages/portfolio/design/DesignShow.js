@@ -1,7 +1,7 @@
 /* eslint-disable operator-linebreak */
 /* eslint-disable no-multi-spaces */
 import React, { useEffect } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import S from '../../../styledComponents';
 import PDFViewer from '../../../shared/PDFViewer';
@@ -11,12 +11,12 @@ import config from '../../../../../config';
 const prefix =
   config.NODE_ENV !== 'production' ? '../../../images/wireframes' : '';
 
-const DesignShow = ({ url, id, ...props }) => {
+const DesignShow = () => {
   useEffect(() => {
     document.title = 'Jack McGregor | Design';
   });
-  const { params } = props.match;
-  const piece = designList.find(el => el.id === params.id);
+  const { designId } = useParams();
+  const piece = designList.find(el => el.id === designId);
 
   return (
     <S.DesignShow className="row">
@@ -41,16 +41,12 @@ const DesignShow = ({ url, id, ...props }) => {
 };
 
 DesignShow.propTypes = {
-  url: PropTypes.string,
-  id: PropTypes.string,
   match: PropTypes.shape({
     params: PropTypes.shape({})
   })
 };
 
 DesignShow.defaultProps = {
-  url: '',
-  id: '',
   match: {}
 };
 

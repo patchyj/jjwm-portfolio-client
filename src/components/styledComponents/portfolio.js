@@ -122,7 +122,6 @@ export const DesignShow = styled.div`
     }
 
     .piece-container {
-      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;

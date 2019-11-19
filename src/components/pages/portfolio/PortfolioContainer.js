@@ -1,6 +1,14 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { Component } from 'react';
+import React from 'react';
+import {
+  Switch,
+  Route,
+  useRouteMatch,
+  Link,
+  withRouter
+} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -11,68 +19,59 @@ import Design from './design/Design';
 import * as projectActions from '../../../actions/projects/projectActions';
 import S from '../../styledComponents';
 
-class PortfolioContainer extends Component {
-  constructor() {
-    super();
-    this.state = {
-      dev: true
-    };
+const PortfolioContainer = ({ location }) => {
+  const match = useRouteMatch();
+  const { pathname } = location;
+  const currentPage = page => pathname.includes(page);
 
-    this.onChangeDev = this.onChangeDev.bind(this);
-  }
-
-  componentDidMount() {
-    const { actions } = this.props;
-    actions.projectActions.getProjects();
-  }
-
-  onChangeDev = () => {
-    // eslint-disable-next-line react/no-access-state-in-setstate
-    this.setState({ dev: !this.state.dev });
-  };
-
-  render() {
-    const { dev } = this.state;
-    const {
-      projects: { projects: projectsList }
-    } = this.props;
-
-    return (
-      <S.Portfolio>
-        <div className="jumbotron jumbotron-fluid">
-          <div className="container">
-            <h3 className="py-4">Portfolio</h3>
-            <h4 className="m-0 py-5">
-              <span
-                className={!dev ? 'text-muted' : ''}
-                onClick={this.onChangeDev}
-              >
-                DEV
-              </span>{' '}
-              |{' '}
-              <span
-                className={dev ? 'text-muted' : ''}
-                onClick={this.onChangeDev}
-              >
-                DESIGN
-              </span>
-            </h4>
-            {dev && <Development projects={data} />}
-            {!dev && <Design projects={projectsList} />}
-          </div>
+  return (
+    <S.Portfolio>
+      <div className="jumbotron jumbotron-fluid">
+        <div className="container">
+          <h3 className="py-4">Portfolio</h3>
+          <h4 className="m-0 py-5">
+            <Link
+              to={`${match.url}/dev`}
+              className={!currentPage('dev') ? 'text-muted' : ''}
+            >
+              DEV
+            </Link>{' '}
+            |{' '}
+            <Link
+              to={`${match.url}/design`}
+              className={!currentPage('design') ? 'text-muted' : ''}
+            >
+              DESIGN
+            </Link>
+          </h4>
+          <Switch>
+            <Route
+              path={`${match.path}/dev`}
+              render={props => <Development {...props} projects={data} />}
+            />
+            <Route path={`${match.path}/design`} component={Design} />
+            <Route path="/">
+              <h6>
+                Choose from one of the above options to see some examples of
+                work I've done
+              </h6>
+            </Route>
+          </Switch>
         </div>
-      </S.Portfolio>
-    );
-  }
-}
+      </div>
+    </S.Portfolio>
+  );
+};
 
 PortfolioContainer.propTypes = {
   actions: PropTypes.shape({ getProjects: PropTypes.func }).isRequired,
-  projects: PropTypes.shape({})
+  projects: PropTypes.shape({}),
+  location: PropTypes.shape({})
 };
 
 PortfolioContainer.defaultProps = {
-  projects: {}
+  projects: {},
+  location: {}
 };
 
 function mapStateToProps(state) {
@@ -90,4 +89,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(PortfolioContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(PortfolioContainer));

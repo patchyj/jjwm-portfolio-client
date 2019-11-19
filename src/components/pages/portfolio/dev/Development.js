@@ -1,32 +1,47 @@
+/* eslint-disable object-curly-newline */
 /* eslint-disable operator-linebreak */
 import React from 'react';
+import { Switch, Route, useRouteMatch, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import projectImages from '../../../../images';
 import makeKey from '../../../../utils/makeKey';
 import S from '../../../styledComponents';
+import DevShow from './DevShow';
 
 const Development = ({ projects }) => {
+  const match = useRouteMatch();
   const projectsList =
     projects &&
     projects.map((project, i) => (
       <div className="row my-3" key={makeKey(project.name, i)}>
         <div className="col-md-4 image">
-          <a href={project.url} target="_blank" rel="noopener noreferrer">
+          <Link to={`${match.url}/${project.id}`}>
             <img
               src={projectImages[i]}
               alt="Circle of Intrapreneurs"
               className="screenshot"
             />
-          </a>
+          </Link>
         </div>
         <div className="col-md-8 px-3">
-          <h3 className="title">{project.name}</h3>
+          <Link to={`${match.url}/${project.id}`}>
+            <h3 className="title">{project.name}</h3>
+          </Link>
           <h5 className="text-muted">
             {project.from} {project.to && `- ${project.to}`}
           </h5>
           <div className="row" style={{ margin: '0' }}>
             <div className="col-md-3 col-sm-12">
               <S.Social className="">
+                {project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i className="fas fa-globe" />
+                  </a>
+                )}
                 {project.github && (
                   <a
                     href={project.github}
@@ -73,7 +88,16 @@ const Development = ({ projects }) => {
       </div>
     ));
 
-  return <div>{projectsList}</div>;
+  return (
+    <div>
+      <Switch>
+        <Route path={`${match.path}/:devId`}>
+          <DevShow projects={projects} />
+        </Route>
+        <Route path="/">{projectsList}</Route>
+      </Switch>
+    </div>
+  );
 };
 
 Development.propTypes = {
