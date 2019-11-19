@@ -1,14 +1,20 @@
 /* eslint-disable operator-linebreak */
 import React from 'react';
+import {
+  Switch, Route, useRouteMatch, Link
+} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import projectImages from '../../../../images';
 import makeKey from '../../../../utils/makeKey';
 import S from '../../../styledComponents';
+import DevShow from './DevShow';
 
 const Development = ({ projects }) => {
+  const match = useRouteMatch();
   const projectsList =
     projects &&
     projects.map((project, i) => (
+
       <div className="row my-3" key={makeKey(project.name, i)}>
         <div className="col-md-4 image">
           <a href={project.url} target="_blank" rel="noopener noreferrer">
@@ -20,7 +26,9 @@ const Development = ({ projects }) => {
           </a>
         </div>
         <div className="col-md-8 px-3">
-          <h3 className="title">{project.name}</h3>
+          <Link to={`${match.url}/${project.id}`}>
+            <h3 className="title">{project.name}</h3>
+          </Link>
           <h5 className="text-muted">
             {project.from} {project.to && `- ${project.to}`}
           </h5>
@@ -73,7 +81,19 @@ const Development = ({ projects }) => {
       </div>
     ));
 
-  return <div>{projectsList}</div>;
+  return (
+    <div>
+
+      <Switch>
+        <Route path={`${match.path}/:devId`}>
+          <DevShow projects={projects} />
+        </Route>
+        <Route path="/">
+          {projectsList}
+        </Route>
+      </Switch>
+    </div>
+  );
 };
 
 Development.propTypes = {

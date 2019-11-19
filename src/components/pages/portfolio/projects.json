@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "name": "Circle of Intrapreneurs",
     "image": "circleofintrapreneurs.png",
     "description": "The Circle of Intrapreneurs is an organisation aimed at getting those in big business involved in helping their companies to help the world, by driving social, environmental and economic change. This site was the end of Phase 1, an MVP of a basic social media platform.",
@@ -7,11 +8,18 @@
     "github": "https://www.circleofintrapreneurs.com",
     "twitter": "https://www.circleofintrapreneurs.com",
     "facebook": "https://www.circleofintrapreneurs.com",
-    "tech": ["React", "Redux", "Express", "NodeJS", "SCSS"],
+    "tech": [
+      "React",
+      "Redux",
+      "Express",
+      "NodeJS",
+      "SCSS"
+    ],
     "from": "March 18",
     "to": "Jan 19"
   },
   {
+    "id": "2",
     "name": "React Front to Back",
     "image": "react-f2b.png",
     "description": "This site was built as an extension to a simple React Front to Back Tutorial by Brad Traversy, a brilliant YouTube tutor. The tutorial itself stepped through the basics with the Context API, after which I carried on building it out and styling it",
@@ -19,11 +27,17 @@
     "github": "https://github.com/patchyj/React-F2B",
     "twitter": "",
     "facebook": "",
-    "tech": ["React", "JSON Placeholder", "SCSS", "Bootstrap"],
+    "tech": [
+      "React",
+      "JSON Placeholder",
+      "SCSS",
+      "Bootstrap"
+    ],
     "from": "Sept 18",
     "to": ""
   },
   {
+    "id": "3",
     "name": "React and Redux",
     "image": "react-redux.png",
     "description": "Similarly to the React Front to Back site above, this one brought in Redux as its state management tool, with Redux Thunk to manage asynchronous requests. I got carried away with the parallax effect on the home page but I'm not sorry about it",
@@ -31,11 +45,18 @@
     "github": "https://github.com/patchyj/React-F2B-Redux",
     "twitter": "",
     "facebook": "",
-    "tech": ["React", "Redux", "JSON Placeholder", "SCSS", "Bootstrap"],
+    "tech": [
+      "React",
+      "Redux",
+      "JSON Placeholder",
+      "SCSS",
+      "Bootstrap"
+    ],
     "from": "Oct 18",
     "to": ""
   },
   {
+    "id": "4",
     "name": "Killing Eve Landing Page",
     "image": "killing-eve.png",
     "description": "I was contacted by one of the Junior producers on the show and was asked to make a simple landing page. It's basic HTML and CSS, which was fun going back to the absolute basics. I think it turned out quite well",
@@ -43,11 +64,15 @@
     "github": "https://www.circleofintrapreneurs.com",
     "twitter": "https://www.circleofintrapreneurs.com",
     "facebook": "https://www.circleofintrapreneurs.com",
-    "tech": ["HTML", "CSS"],
+    "tech": [
+      "HTML",
+      "CSS"
+    ],
     "from": "Aug 18",
     "to": ""
   },
   {
+    "id": "5",
     "name": "Piñata",
     "image": "pinata.png",
     "description": "This was the final project at General Assembly, building a widget-based web-app that requested data from many different APIs (Jokes, Weather, News, Music etc) and created little cards that could be moved around the dashboard (like Trello)",
@@ -55,11 +80,18 @@
     "github": "https://www.circleofintrapreneurs.com",
     "twitter": "",
     "facebook": "",
-    "tech": ["AngularJS", "Tachyons", "SCSS", "ExpressJS", "NodeJS"],
+    "tech": [
+      "AngularJS",
+      "Tachyons",
+      "SCSS",
+      "ExpressJS",
+      "NodeJS"
+    ],
     "from": "June 17",
     "to": ""
   },
   {
+    "id": "6",
     "name": "Texas Hold'em Poker",
     "image": "poker.png",
     "description": "I decided to take a break from building apps and went back to games. I had always wanted to build poker and saw it as a good opportunity to practice pure Javascript. Unfortunately it isn't 100% complete but I'm still proud of what I managed to build in the time I had (~2 weeks in my spare time)",
@@ -67,7 +99,11 @@
     "github": "https://github.com/patchyj/poker",
     "twitter": "",
     "facebook": "",
-    "tech": ["HTML", "Javscript ES6+", "SCSS"],
+    "tech": [
+      "HTML",
+      "Javscript ES6+",
+      "SCSS"
+    ],
     "from": "Nov 18",
     "to": ""
   }

@@ -50,7 +50,7 @@ const PDFViewer = ({ url, id, showall, outline }) => {
 
 PDFViewer.propTypes = {
   url: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   showall: PropTypes.bool,
   outline: PropTypes.bool
 };
