@@ -3,9 +3,10 @@
 export default {
   extraSmall: '325px',
   small: '540px',
+  bsSmall: '575px',
   medium: '720px',
-  midMedium: '768px',
+  bsMedium: '768px',
   large: '960px',
-  midLarge: '991px',
+  bsLarge: '991px',
   extraLarge: '1140px',
 };

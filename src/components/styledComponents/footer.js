@@ -46,7 +46,7 @@ export const Footer = styled.div`
     }
   }
 
-  @media (max-width: ${maxWidth.midMedium}) {
+  @media (max-width: ${maxWidth.bsMedium}) {
     width: 100%;
   }
 `;

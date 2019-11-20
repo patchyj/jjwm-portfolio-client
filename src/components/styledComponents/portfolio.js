@@ -138,7 +138,7 @@ export const DesignShow = styled.div`
     .column-right {
       justify-content: center;
     }
-    @media (max-width: ${maxWidth.midLarge}) {
+    @media (max-width: ${maxWidth.bsLarge}) {
       .column-left {
         position:relative;
 
