@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Switch,
   Route,
@@ -23,6 +23,9 @@ const PortfolioContainer = ({ location }) => {
   const match = useRouteMatch();
   const { pathname } = location;
   const currentPage = page => pathname.includes(page);
+  useEffect(() => {
+    document.title = 'Jack McGregor | Portfolio';
+  });
 
   return (
     <S.Portfolio>
@@ -89,7 +92,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(
+export default withRouter(connect(
   mapStateToProps,
   mapDispatchToProps
-)(withRouter(PortfolioContainer));
+)(PortfolioContainer));

@@ -102,39 +102,57 @@ export const PDFViewer = styled.div`
 
 export const DesignShow = styled.div`
   box-sizing: border-box;
-  padding: 1rem;
 
   &.row {
     margin: 0;
-  }
+    padding: 0;
 
-  .column {
-    display: flex;
-    flex: 80%;
-    padding-right: 8px;
-    box-sizing: border-box;
-    justify-content: center;
-
-    canvas {
-      width: 100% !important;
-      height: auto !important;
-      margin-bottom: 10px;
-    }
-
-    .piece-container {
+    .column {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
+      padding-right: 8px;
+      box-sizing: border-box;
 
-      .description {
-        width: 280px;
+      canvas {
+        width: 100% !important;
+        height: auto !important;
+        margin-bottom: 10px;
+      }
 
-        h1 {
-          padding: 0;
-          text-align: left;
+      .piece-container {
+        display: flex;
+        align-items: center;
+
+        .description {
+
+          h1 {
+            padding: 0;
+            text-align: left;
+          }
         }
       }
     }
+    .column-left {
+      position:fixed;
+      width:100%;
+    }
+    .column-right {
+      justify-content: center;
+    }
+    @media (max-width: ${maxWidth.midLarge}) {
+      .column-left {
+        position:relative;
+
+        .piece-container {
+          width: 100%;
+        }
+      }
+    }
+    @media (max-width: ${maxWidth.small}) {
+      .column {
+        flex: 100%;
+      }
+    }
   }
+
+
 `;

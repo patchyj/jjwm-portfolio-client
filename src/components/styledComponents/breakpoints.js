@@ -5,5 +5,6 @@ export default {
   small: '540px',
   medium: '720px',
   large: '960px',
+  midLarge: '991px',
   extraLarge: '1140px',
 };
