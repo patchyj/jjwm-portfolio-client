@@ -18,6 +18,8 @@ import Development from './dev/Development';
 import Design from './design/Design';
 import * as projectActions from '../../../actions/projects/projectActions';
 import S from '../../styledComponents';
+import Modal from '../../shared/Modal';
+import chimp from '../../../images/chimp-poster.jpg';
 
 const PortfolioContainer = ({ location }) => {
   const match = useRouteMatch();
@@ -92,7 +94,6 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default withRouter(connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PortfolioContainer));
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(PortfolioContainer)
+);
