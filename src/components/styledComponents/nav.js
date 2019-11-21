@@ -16,6 +16,9 @@ export const Nav = styled.div`
   .fixed-top {
     z-index: 0;
   }
+  .fa-bars {
+    cursor: pointer;
+  }
 
   @media (max-width: ${maxWidth.small}) {
     .nav-item {
