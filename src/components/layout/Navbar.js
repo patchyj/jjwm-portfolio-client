@@ -5,9 +5,14 @@ import S from '../styledComponents';
 import { dimensions } from '../styledComponents/breakpoints';
 import NavList from './NavList';
 
-const shouldCollapse = (width, breakpoint) => width < breakpoint;
+export const shouldCollapse = (width, breakpoint) => width < breakpoint;
 
-const shouldSetResponsiveMode = (collapsed, responsive, setMode, setOpen) => {
+export const shouldSetResponsiveMode = (
+  collapsed,
+  responsive,
+  setMode,
+  setOpen
+) => {
   if (collapsed && !responsive) setMode(true);
 
   if (!collapsed && responsive) {

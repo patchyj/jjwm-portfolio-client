@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Navbar should change responsive state to true if windowWidth < breakpoint 1`] = `ShallowWrapper {}`;
+
 exports[`Navbar should render 1`] = `ShallowWrapper {}`;
