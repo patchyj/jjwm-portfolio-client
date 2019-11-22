@@ -8,8 +8,8 @@ export const dimensions = {
   bsMedium: 768,
   large: 960,
   bsLarge: 991,
-  extraLarge: 1140,
-}
+  extraLarge: 1140
+};
 
 export default {
   extraSmall: `${dimensions.extraSmall}px`,
@@ -19,5 +19,5 @@ export default {
   bsMedium: `${dimensions.bsMedium}px`,
   large: `${dimensions.large}px`,
   bsLarge: `${dimensions.bsLarge}px`,
-  extraLarge: `${dimensions.extraLarge}px`,
+  extraLarge: `${dimensions.extraLarge}px`
 };

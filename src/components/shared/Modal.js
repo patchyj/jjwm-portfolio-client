@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
@@ -9,7 +11,8 @@ class Modal extends PureComponent {
   constructor() {
     super();
     this.state = {
-      showModal: false
+      showModal: false,
+      url: ''
     };
   }
 
@@ -23,7 +26,7 @@ class Modal extends PureComponent {
 
   render() {
     const { trigger: Trigger, content } = this.props;
-    console.log(content);
+    const { url } = this.state;
 
     return (
       <div>
