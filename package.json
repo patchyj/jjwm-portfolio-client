@@ -14,6 +14,7 @@
     "heroku-postbuild": "babel-node tools/build.js",
     "heroku-prebuild": "",
     "lint": "esw webpack.config.* src tools --color",
+    "lint:fix": "npm run lint -- --fix",
     "lint:watch": "npm run lint -- --watch",
     "open:cover": "npm run test:cover && opn ./coverage/lcov-report/index.html",
     "open:dist": "babel-node tools/distServer.js",
