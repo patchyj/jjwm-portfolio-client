@@ -10,6 +10,7 @@ import DevShow from './DevShow';
 
 const Development = ({ projects }) => {
   const match = useRouteMatch();
+
   const projectsList =
     projects &&
     projects.map((project, i) => (

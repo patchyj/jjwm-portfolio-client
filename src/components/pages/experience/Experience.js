@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import uuidv2 from 'uuid/v1';
+import { ExperienceType } from '../../types/ExperienceType';
 import ExpItem from './ExpItem';
 import S from '../../styledComponents';
 
@@ -14,21 +15,11 @@ const Experience = ({ expList }) => {
 };
 
 Experience.propTypes = {
-  expList: PropTypes.arrayOf(
-    PropTypes.shape({
-      company: PropTypes.string,
-      companyUrl: PropTypes.string,
-      companyLogo: PropTypes.string,
-      city: PropTypes.string,
-      role: PropTypes.string,
-      from: PropTypes.string,
-      to: PropTypes.string,
-      description: PropTypes.string
-    })
-  )
+  expList: PropTypes.arrayOf(ExperienceType)
 };
 
 Experience.defaultProps = {
   expList: []
 };
+
 export default Experience;

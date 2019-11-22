@@ -1,9 +1,23 @@
 // When importing, call this file 'maxWidth'
 
+export const dimensions = {
+  extraSmall: 325,
+  small: 540,
+  bsSmall: 575,
+  medium: 720,
+  bsMedium: 768,
+  large: 960,
+  bsLarge: 991,
+  extraLarge: 1140
+};
+
 export default {
-  extraSmall: '325px',
-  small: '540px',
-  medium: '720px',
-  large: '960px',
-  extraLarge: '1140px',
+  extraSmall: `${dimensions.extraSmall}px`,
+  small: `${dimensions.small}px`,
+  bsSmall: `${dimensions.bsSmall}px`,
+  medium: `${dimensions.medium}px`,
+  bsMedium: `${dimensions.bsMedium}px`,
+  large: `${dimensions.large}px`,
+  bsLarge: `${dimensions.bsLarge}px`,
+  extraLarge: `${dimensions.extraLarge}px`
 };

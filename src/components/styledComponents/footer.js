@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import maxWidth from './breakpoints';
 
 export const Footer = styled.div`
-  width: 100%;
+  width: 80%;
   transform: translateY(100%);
 
   .social,
@@ -11,32 +11,42 @@ export const Footer = styled.div`
   .byline {
     width: 300px;
     margin: auto;
-    transform: translateX(-35%);
-  }
-
-  .social,
-  .recommend {
     display: flex;
+    text-align:center;
     align-items: center;
     justify-content: space-between;
   }
 
+  .recommend,
   .byline {
-    text-align: center;
+    justify-content: space-around;
+  }
+
+  .byline {
     padding: 2rem;
   }
 
-  .social a i {
-    transition: 0.2s;
-  }
-  .social a:hover i {
-    color: teal;
+  .social a {
+    i {
+      transition: 0.2s;
+    }
+    &:hover i {
+      color: teal;
+    }
   }
 
   @media (max-width: ${maxWidth.medium}) {
-    .social {
+    margin-left: 0;
+
+    .social,
+    .recommend,
+    .byline {
       width: auto;
       transform: none !important;
     }
+  }
+
+  @media (max-width: ${maxWidth.bsMedium}) {
+    width: 100%;
   }
 `;

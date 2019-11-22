@@ -1,6 +1,6 @@
 /* eslint-disable operator-linebreak */
 /* eslint-disable no-multi-spaces */
-import React, { useEffect } from 'react';
+import React from 'react';
 import { withRouter, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import S from '../../../styledComponents';
@@ -12,15 +12,12 @@ const prefix =
   config.NODE_ENV !== 'production' ? '../../../images/wireframes' : '';
 
 const DesignShow = () => {
-  useEffect(() => {
-    document.title = 'Jack McGregor | Design';
-  });
   const { designId } = useParams();
   const piece = designList.find(el => el.id === designId);
 
   return (
     <S.DesignShow className="row">
-      <div className="col-md-4 column">
+      <div className="col-lg-4 col-12 column column-left">
         <div className="piece-container">
           <div className="description">
             <h1>{piece && piece.title}</h1>
@@ -28,7 +25,7 @@ const DesignShow = () => {
           </div>
         </div>
       </div>
-      <div className="col-8 column">
+      <div className="col-lg-8 offset-lg-4 col-12 column column-right">
         <PDFViewer
           url={piece && `${prefix}${piece.url}`}
           id={piece && piece.id}

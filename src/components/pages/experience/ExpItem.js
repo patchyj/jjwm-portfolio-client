@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import S from '../../styledComponents';
+import { ExperienceType, ExperienceDefaultType } from '../../types/ExperienceType';
 
 const ExpItem = ({
   company,
@@ -33,24 +33,8 @@ const ExpItem = ({
   </Fragment>
 );
 
-ExpItem.propTypes = {
-  company: PropTypes.string,
-  companyUrl: PropTypes.string,
-  city: PropTypes.string,
-  role: PropTypes.string,
-  from: PropTypes.string,
-  to: PropTypes.string,
-  description: PropTypes.string
-};
+ExpItem.propTypes = ExperienceType;
 
-ExpItem.defaultProps = {
-  company: '',
-  companyUrl: '',
-  city: '',
-  role: '',
-  from: '',
-  to: '',
-  description: ''
-};
+ExpItem.defaultProps = ExperienceDefaultType;
 
 export default ExpItem;
