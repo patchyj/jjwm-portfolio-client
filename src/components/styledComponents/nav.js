@@ -33,12 +33,15 @@ export const Nav = styled.div`
   .dropdown {
     display: flex;
     flex-direction: column;
-
+    text-align: left;
     ul {
       padding: 0;
       list-style: none;
-
       li {
+        .nav-link {
+          padding: 1rem 0;
+          text-align: left;
+        }
       }
     }
   }
@@ -54,7 +57,9 @@ export const Nav = styled.div`
       height: ${({ isOpen }) => (isOpen ? '100vh' : 'auto')};
       background: rgb(231, 245, 245);
     }
+  }
 
+  @media (max-width: ${maxWidth.bsMedium}) {
     .fixed-top {
       z-index: 1030;
     }
