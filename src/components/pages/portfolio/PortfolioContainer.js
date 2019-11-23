@@ -1,10 +1,10 @@
+/* eslint-disable object-curly-newline */
+/* eslint-disable no-trailing-spaces */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useEffect } from 'react';
-import {
- Switch, Route, useRouteMatch, Link 
-} from 'react-router-dom';
+import { Switch, Route, useRouteMatch, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import data from './projects.json';
 import Development from './dev/Development';
