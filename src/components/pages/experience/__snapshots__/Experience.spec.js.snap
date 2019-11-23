@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Experience should render a list if a list is present 1`] = `ShallowWrapper {}`;

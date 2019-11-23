@@ -6,7 +6,7 @@ import { hot } from 'react-hot-loader';
 import Navbar from './layout/NavConnect';
 import HomePage from './HomePage';
 import About from './pages/about/About';
-import PortfolioContainer from './pages/portfolio/PortfolioContainer';
+import PortfolioContainer from './pages/portfolio/PortfolioConnect';
 import Skills from './pages/skills/Skills';
 import Experience from './pages/experience/Experience';
 import S from './styledComponents';

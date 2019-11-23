@@ -6,7 +6,7 @@ import projectImages from '../../../../images';
 
 function DevShow({ projects }) {
   const { devId } = useParams();
-  const project = projects.find(p => p.id === devId);
+  const project = projects.find(p => p.id === devId) || {};
 
   return (
     <div className="row">
@@ -16,7 +16,7 @@ function DevShow({ projects }) {
       <div className="col-md-8">
         <img
           src={projectImages[devId - 1]}
-          alt="Circle of Intrapreneurs"
+          alt={project.name}
           className="screenshot"
         />
       </div>

@@ -9,7 +9,9 @@ const Experience = ({ expList }) => {
   const list = expList && expList.map(e => <ExpItem {...e} key={uuidv2()} />);
   return (
     <S.Experience>
-      <div className="listContainer">{list}</div>
+      <div className="listContainer">
+        {list && list.length ? list : 'Please add an experience'}
+      </div>
     </S.Experience>
   );
 };
