@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.1
 jobs:
   build:
     working_directory: ~/jjwm-portfolio-client
@@ -27,3 +29,10 @@ jobs:
       - store_artifacts:
           path: coverage
           prefix: coverage
+      - sonarcloud/scan
+
+workflows:
+  main:
+    jobs:
+      - build:
+          context: SonarCloud
