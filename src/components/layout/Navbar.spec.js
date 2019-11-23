@@ -2,7 +2,6 @@ import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Navbar, { shouldCollapse, shouldSetResponsiveMode } from './Navbar';
-import { dimensions } from '../styledComponents/breakpoints';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -21,13 +20,6 @@ describe('Navbar', () => {
   });
 
   it('should render', () => {
-    // console.log(
-    //   wrapper
-    //     .find('NavList')
-    //     .dive()
-    //     .find('NavLink')
-    //     .debug()
-    // );
     expect(wrapper).toMatchSnapshot();
   });
 });

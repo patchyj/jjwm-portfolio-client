@@ -13,6 +13,7 @@ const Loader = ({ width, name }) => {
       type = Pokeball;
       break;
     default:
+      type = '';
       break;
   }
 

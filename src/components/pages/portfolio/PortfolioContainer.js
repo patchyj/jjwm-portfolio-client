@@ -3,21 +3,14 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useEffect } from 'react';
 import {
-  Switch,
-  Route,
-  useRouteMatch,
-  Link,
-  withRouter
+ Switch, Route, useRouteMatch, Link 
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import data from './projects.json';
-import './PortfolioContainer.scss';
 import Development from './dev/Development';
 import Design from './design/Design';
-import * as projectActions from '../../../actions/projects/projectActions';
 import S from '../../styledComponents';
+import './PortfolioContainer.scss';
 
 const PortfolioContainer = ({ location }) => {
   const match = useRouteMatch();
@@ -53,7 +46,7 @@ const PortfolioContainer = ({ location }) => {
               render={props => <Development {...props} projects={data} />}
             />
             <Route path={`${match.path}/design`} component={Design} />
-            <Route path="/">
+            <Route path={`${match.path}`}>
               <h6>
                 Choose from one of the above options to see some examples of
                 work I've done
@@ -67,7 +60,6 @@ const PortfolioContainer = ({ location }) => {
 };
 
 PortfolioContainer.propTypes = {
-  actions: PropTypes.shape({ getProjects: PropTypes.func }).isRequired,
   projects: PropTypes.shape({}),
   location: PropTypes.shape({})
 };
@@ -77,21 +69,4 @@ PortfolioContainer.defaultProps = {
   location: {}
 };
 
-function mapStateToProps(state) {
-  return {
-    projects: state.projects,
-    errors: state.errors
-  };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: {
-      projectActions: bindActionCreators(projectActions, dispatch)
-    }
-  };
-}
-
-export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(PortfolioContainer)
-);
+export default PortfolioContainer;
