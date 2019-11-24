@@ -136,6 +136,11 @@ docker run -p 8000:80 react-docker
 
 Then go to `http://localhost:8000` to see the project
 
+Used the following links for guidance:
+
+1. [Medium](https://medium.com/greedygame-engineering/so-you-want-to-dockerize-your-react-app-64fbbb74c217)
+2. [mherman.org](https://mherman.org/blog/dockerizing-a-react-app/)
+
 ## Deployment
 
 For ease of use, this project uses Heroku for deployment and is configured to build on every build or push to master, after all steps in the pipeline have run.
