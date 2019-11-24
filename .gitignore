@@ -43,3 +43,6 @@ dist
 .DS_Store
 
 .env
+
+Dockerfile
+.dockerignore
