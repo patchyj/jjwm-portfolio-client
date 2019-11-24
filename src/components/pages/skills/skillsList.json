@@ -19,6 +19,7 @@
   { "name": "Photoshop", "level": 70 },
   { "name": "Illustrator", "level": 75 },
   { "name": "Sketch", "level": 70 },
+  { "name": "Puns", "level": 100 },
   { "name": "Jest", "level": 75 },
   { "name": "Enzyme", "level": 60 },
   { "name": "Bash Scripting", "level": 50 },

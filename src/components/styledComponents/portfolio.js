@@ -123,7 +123,6 @@ export const DesignShow = styled.div`
         align-items: center;
 
         .description {
-
           h1 {
             padding: 0;
             text-align: left;
@@ -132,15 +131,15 @@ export const DesignShow = styled.div`
       }
     }
     .column-left {
-      position:fixed;
-      width:100%;
+      position: fixed;
+      width: 100%;
     }
     .column-right {
       justify-content: center;
     }
     @media (max-width: ${maxWidth.bsLarge}) {
       .column-left {
-        position:relative;
+        position: relative;
 
         .piece-container {
           width: 100%;
@@ -153,6 +152,10 @@ export const DesignShow = styled.div`
       }
     }
   }
+`;
 
-
+export const Thumb = styled.img`
+  width: 100%;
+  margin-bottom: 8px;
+  outline: ${({ outline }) => (outline ? '1px solid #ccc' : '')};
 `;
