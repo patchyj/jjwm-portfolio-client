@@ -46,7 +46,7 @@ Once installed, there are two options to run it:
 - `npm run test:cover` run tests with coverage
 - Tests must pass before the build passes
 
-### End-to-end tests: Cypress
+### End-to-end tests: Cypress - TO DO
 
 - `npm run cypress` run tests in browser
 - `npm run cypress:dev` run tests in silent mode (no browser)
@@ -118,7 +118,23 @@ sonar.organization=<your-project-organisation>
 
 ### Webpack - TO DO
 
-### Docker - TO DO
+### Docker
+
+This project includes a `Dockerfile` and `.dockerignore` to generate a production build (Step 1) and serve it using **Nginx** (Step 2).
+
+To build the image:
+
+```bash
+docker build . -t react-docker
+```
+
+To run the image:
+
+```bash
+docker run -p 8000:80 react-docker
+```
+
+Then go to `http://localhost:8000` to see the project
 
 ## Deployment
 
