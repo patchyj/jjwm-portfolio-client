@@ -68,7 +68,7 @@ This app uses Prettier and ESLint for linting and formatting. You can set your o
 
 ### Pipeline: CircleCI
 
-This app uses the free version of [CircleCI](https://circleci.com/) as a pipeline. You'll need to sign up and create an app.
+This app uses the free version of [CircleCI](https://circleci.com/) as a pipeline. You'll need to sign up and create an app, and link the app to the Github Repo. The repo settings should be configured to run the pipeline on every push.
 
 In `.circleci/config.yml` replace the following line:
 
@@ -78,8 +78,50 @@ working_directory: ~/<your-circleci-app>
 
 ### Pipeline: Jenkins - TO DO
 
-### Pipeline: SonarQube - TO DO
+### Pipeline: SonarQube
+
+There's a couple of ways to include the popular SonarQube code quality and vulnerability checks. You can either download it and run it locally using SonarQube's SDK, though using their [official Docker image](https://hub.docker.com/_/sonarqube/) is much easier. You can follow the instructions and choose to include it as a standalone process or include it in a CI/CD pipeline.
+
+However, [SonarCloud](https://sonarcloud.io/) offer an easier alternative: after setting up a new project, you can follow their easy-to-use instructions to include a SonarQube step in CircleCI connected directly to the Github Repo and the CircleCI cloud app. You just need to include the step in `.circleci/config.yml` and include a `sonar-project.properties` file in the root
+
+```yml
+# .circleci/config.yml
+
+version: 2.1
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.1
+      # previous steps...
+      - sonarcloud/scan
+
+workflows:
+  main:
+    jobs:
+      - build:
+          context: SonarCloud
+```
+
+```yml
+# .circleci/config.yml
+
+sonar.projectKey=<your-project-key>
+sonar.organization=<your-project-organisation>
+# This is the name and version displayed in the SonarCloud UI.
+#sonar.projectName=<your-project-name>
+#sonar.projectVersion=1.0
+
+# Path is relative to the sonar-project.properties file. Replace "\" by "/" on Windows.
+#sonar.sources=.
+
+# Encoding of the source code. Default is default system encoding
+#sonar.sourceEncoding=UTF-8
+```
 
 ### Webpack - TO DO
 
 ### Docker - TO DO
+
+## Deployment
+
+For ease of use, this project uses Heroku for deployment and is configured to build on every build or push to master, after all steps in the pipeline have run.
+
+However, you can also use Docker to run a build version on a hosting service of your choice
