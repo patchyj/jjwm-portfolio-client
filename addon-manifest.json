@@ -1,0 +1,22 @@
+{
+  "id": "jjwm-portfolio-client",
+  "api": {
+    "config_vars_prefix": "JJWM_PORTFOLIO_CLIENT",
+    "config_vars": [
+      "JJWM_PORTFOLIO_CLIENT_URL"
+    ],
+    "password": "CHANGEME",
+    "sso_salt": "CHANGEME",
+    "regions": [
+      "eu",
+      "us"
+    ],
+    "requires": [],
+    "production": {
+      "base_url": "https://myaddon.com/heroku/resources",
+      "sso_url": "https://myaddon.com/sso/login"
+    },
+    "version": "3"
+  },
+  "name": "jjwm-portfolio-client"
+}
