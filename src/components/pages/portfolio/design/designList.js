@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import images from '../../../../images/wireframes';
 
 export default [
