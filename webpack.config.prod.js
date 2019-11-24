@@ -30,7 +30,6 @@ export default {
     net: 'empty',
     tls: 'empty'
   },
-  devtool: 'source-map', // more info:https://webpack.js.org/guides/production/#source-mapping and https://webpack.js.org/configuration/devtool/
   entry: path.resolve(__dirname, 'src/index'),
   target: 'web',
   mode: 'production',
@@ -39,6 +38,7 @@ export default {
     publicPath: '/',
     filename: '[name].[contenthash].js'
   },
+  devtool: 'source-map',
   plugins: [
     // Tells React to build in prod mode. https://facebook.github.io/react/downloads.html
     new webpack.DefinePlugin(GLOBALS),

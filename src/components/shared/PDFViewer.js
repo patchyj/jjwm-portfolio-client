@@ -6,6 +6,7 @@ import { Document, Page } from 'react-pdf';
 import PropTypes from 'prop-types';
 import uuidv2 from 'uuid/v1';
 import S from '../styledComponents';
+import Loader from './Loader';
 
 const PDFViewer = ({ url, showall, outline }) => {
   const [pageNumber] = useState(1);
@@ -30,6 +31,7 @@ const PDFViewer = ({ url, showall, outline }) => {
       <Document
         file={url}
         onLoadSuccess={({ _pdfInfo }) => setNumPages(_pdfInfo.numPages)}
+        loading={<Loader width="100" name="pikachu" />}
       >
         {showall ? (
           list
