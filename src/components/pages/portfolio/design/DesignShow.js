@@ -17,7 +17,7 @@ const DesignShow = () => {
 
   return (
     <S.DesignShow className="row">
-      <div className="col-lg-4 col-12 column column-left">
+      <div className="col-lg-3 col-12 column column-left">
         <div className="piece-container">
           <div className="description">
             <h1>{piece && piece.title}</h1>
