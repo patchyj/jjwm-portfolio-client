@@ -1,12 +1,14 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import LoginSection from './sections/Login';
 import RegisterSection from './sections/Register';
 import S from '../../styledComponents';
 
-const AuthContainer = () => {
+const AuthContainer = ({ loginUser, registerUser }) => {
   const [isLogin, setLogin] = useState(true);
+
   return (
     <S.AuthContainer>
       <S.AuthHeader isLogin={isLogin}>
@@ -21,9 +23,23 @@ const AuthContainer = () => {
           </li>
         </ul>
       </S.AuthHeader>
-      {isLogin ? <LoginSection /> : <RegisterSection />}
+      {isLogin ? (
+        <LoginSection onSubmit={loginUser} />
+      ) : (
+        <RegisterSection onSubmit={registerUser} />
+      )}
     </S.AuthContainer>
   );
+};
+
+AuthContainer.propTypes = {
+  loginUser: PropTypes.func,
+  registerUser: PropTypes.func
+};
+
+AuthContainer.defaultProps = {
+  loginUser: () => {},
+  registerUser: () => {}
 };
 
 export default AuthContainer;

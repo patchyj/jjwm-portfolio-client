@@ -9,7 +9,7 @@ import About from './pages/about/About';
 import PortfolioContainer from './pages/portfolio/PortfolioConnect';
 import Skills from './pages/skills/Skills';
 import Experience from './pages/experience/Experience';
-import AuthContainer from './pages/auth/AuthContainer';
+import Auth from './pages/auth/AuthConnect';
 import S from './styledComponents';
 import skillsList from './pages/skills/skillsList.json';
 import expList from './pages/experience/experienceList.json';
@@ -36,7 +36,7 @@ function App() {
               path="/experience"
               render={props => <Experience {...props} expList={expList} />}
             />
-            <Route path="/auth" component={AuthContainer} />
+            <Route path="/auth" component={Auth} />
             <Route exact path="/" component={HomePage} />
           </Switch>
         </div>

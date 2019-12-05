@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import S from '../../../styledComponents';
 import FormGroup from '../../../shared/forms/FormGroup';
 import FormSubmit from '../../../shared/forms/FormSubmit';
@@ -7,8 +8,8 @@ class Login extends Component {
   constructor() {
     super();
     this.state = {
-      email: '',
-      password: ''
+      email: 'test1@test.com',
+      password: 'password'
     };
   }
 
@@ -21,11 +22,9 @@ class Login extends Component {
 
   onSubmit = () => {
     const { email, password } = this.state;
+    const { onSubmit } = this.props;
 
-    console.log({
-      email,
-      password
-    });
+    onSubmit({ email, password });
   };
 
   render() {
@@ -55,5 +54,13 @@ class Login extends Component {
     );
   }
 }
+
+Login.propTypes = {
+  onSubmit: PropTypes.func
+};
+
+Login.defaultProps = {
+  onSubmit: () => {}
+};
 
 export default Login;
