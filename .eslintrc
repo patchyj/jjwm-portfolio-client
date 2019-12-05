@@ -53,6 +53,7 @@
         "devDependencies": ["**/*.spec.js"],
         "packageDir": ["./tools"]
       }
-    ]
+    ],
+    "no-trailing-spaces": "off"
   }
 }
