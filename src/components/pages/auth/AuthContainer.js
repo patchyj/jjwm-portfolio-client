@@ -49,7 +49,10 @@ const AuthContainer = ({ loginUser, registerUser, auth }) => {
 
 AuthContainer.propTypes = {
   loginUser: PropTypes.func,
-  registerUser: PropTypes.func
+  registerUser: PropTypes.func,
+  auth: PropTypes.shape({
+    errors: PropTypes.shape({})
+  }).isRequired
 };
 
 AuthContainer.defaultProps = {

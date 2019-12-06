@@ -11,7 +11,7 @@ describe('NavLink', () => {
     defaultProps = {
       page: 'test',
       title: 'Test',
-      closeModal: jest.fn()
+      onClick: jest.fn()
     };
     Object.defineProperty(window, 'location', {
       value: {
@@ -29,10 +29,10 @@ describe('NavLink', () => {
     expect(wrapper.find('Link').prop('to')).toBe('/test');
   });
 
-  it('should trigger closeModal when clicked', () => {
+  it('should trigger onClick when clicked', () => {
     const wrapper = shallow(<NavLink {...defaultProps} />);
     wrapper.find('Link').simulate('click');
-    expect(defaultProps.closeModal).toHaveBeenCalled();
+    expect(defaultProps.onClick).toHaveBeenCalled();
   });
 
   it('should NOT have the "text-muted" class when the window location does not match the page', () => {

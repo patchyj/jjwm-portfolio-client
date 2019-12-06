@@ -5,7 +5,9 @@ import NavList from './NavList';
 describe('NavList', () => {
   it('should render', () => {
     const props = {
-      closeModal: () => {}
+      closeModal: () => {},
+      isAuthenticated: false,
+      logoutUser: jest.fn()
     };
     const wrapper = shallow(<NavList {...props} />);
     expect(wrapper).toMatchSnapshot();

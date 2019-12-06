@@ -94,7 +94,8 @@ const Navbar = ({ auth: { isAuthenticated }, logoutUser }) => {
 Navbar.propTypes = {
   auth: PropTypes.shape({
     isAuthenticated: PropTypes.bool.isRequired
-  }).isRequired
+  }).isRequired,
+  logoutUser: PropTypes.func.isRequired
 };
 
 export default Navbar;

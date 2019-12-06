@@ -18,7 +18,9 @@ const NavList = ({ closeModal, isAuthenticated, logoutUser }) => (
 );
 
 NavList.propTypes = {
-  closeModal: PropTypes.func
+  closeModal: PropTypes.func,
+  isAuthenticated: PropTypes.bool.isRequired,
+  logoutUser: PropTypes.func.isRequired
 };
 
 NavList.defaultProps = {

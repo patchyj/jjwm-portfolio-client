@@ -1,5 +1,7 @@
+/* eslint-disable no-console */
 /* eslint-disable object-curly-newline */
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import S from '../../../styledComponents';
 import FormGroup from '../../../shared/forms/FormGroup';
 import FormSubmit from '../../../shared/forms/FormSubmit';
@@ -85,5 +87,13 @@ class Register extends Component {
     );
   }
 }
+
+Register.propTypes = {
+  networkErr: PropTypes.bool
+};
+
+Register.defaultProps = {
+  networkErr: false
+};
 
 export default Register;
