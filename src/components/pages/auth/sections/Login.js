@@ -8,7 +8,7 @@ class Login extends Component {
   constructor() {
     super();
     this.state = {
-      email: 'test1@test.com',
+      email: 'test3@test.com',
       password: 'password'
     };
   }
@@ -29,9 +29,10 @@ class Login extends Component {
 
   render() {
     const { email, password } = this.state;
+    const { networkErr, errors } = this.props;
 
     return (
-      <S.FormContainer>
+      <S.FormContainer isInvalid={networkErr}>
         <h4>Login</h4>
         <FormGroup
           label="Email"
@@ -40,6 +41,7 @@ class Login extends Component {
           name="email"
           value={email}
           onChange={this.onChange}
+          errors={errors && errors.email}
         />
         <FormGroup
           label="Password"
@@ -48,6 +50,7 @@ class Login extends Component {
           name="password"
           value={password}
           onChange={this.onChange}
+          errors={errors && errors.password}
         />
         <FormSubmit label="Login" onSubmit={this.onSubmit} />
       </S.FormContainer>
@@ -56,11 +59,15 @@ class Login extends Component {
 }
 
 Login.propTypes = {
-  onSubmit: PropTypes.func
+  onSubmit: PropTypes.func,
+  networkErr: PropTypes.bool,
+  errors: PropTypes.shape({})
 };
 
 Login.defaultProps = {
-  onSubmit: () => {}
+  onSubmit: () => {},
+  networkErr: false,
+  errors: {}
 };
 
 export default Login;

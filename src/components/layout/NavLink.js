@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const NavLink = ({ page, title, closeModal }) => {
+const NavLink = ({ page, title, onClick }) => {
   const { pathname } = window.location;
 
   return (
@@ -10,7 +10,7 @@ const NavLink = ({ page, title, closeModal }) => {
       <Link
         to={`/${page}`}
         className={`nav-link ${pathname === `/${page}` ? 'text-muted' : ''}`}
-        onClick={closeModal}
+        onClick={onClick}
       >
         {title}
       </Link>
@@ -21,13 +21,13 @@ const NavLink = ({ page, title, closeModal }) => {
 NavLink.propTypes = {
   page: PropTypes.string,
   title: PropTypes.string,
-  closeModal: PropTypes.func
+  onClick: PropTypes.func
 };
 
 NavLink.defaultProps = {
   page: '',
   title: '',
-  closeModal: () => {}
+  onClick: () => {}
 };
 
 export default NavLink;

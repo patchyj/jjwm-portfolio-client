@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 import React, { Component } from 'react';
 import S from '../../../styledComponents';
 import FormGroup from '../../../shared/forms/FormGroup';
@@ -23,9 +24,7 @@ class Register extends Component {
   };
 
   onSubmit = () => {
-    const {
- firstName, lastName, email, password, password2 
-} = this.state;
+    const { firstName, lastName, email, password, password2 } = this.state;
 
     console.log({
       firstName,
@@ -37,12 +36,11 @@ class Register extends Component {
   };
 
   render() {
-    const {
- firstName, lastName, email, password, password2 
-} = this.state;
+    const { firstName, lastName, email, password, password2 } = this.state;
+    const { networkErr } = this.props;
 
     return (
-      <S.FormContainer>
+      <S.FormContainer isInvalid={networkErr}>
         <h4>Register</h4>
         <FormGroup
           label="First name"

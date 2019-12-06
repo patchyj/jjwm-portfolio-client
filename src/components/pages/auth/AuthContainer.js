@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
@@ -6,8 +7,13 @@ import LoginSection from './sections/Login';
 import RegisterSection from './sections/Register';
 import S from '../../styledComponents';
 
-const AuthContainer = ({ loginUser, registerUser }) => {
+const AuthContainer = ({ loginUser, registerUser, auth }) => {
   const [isLogin, setLogin] = useState(true);
+
+  const { errors } = auth;
+  const networkErr =
+    errors &&
+    (errors.login === 'Network Error' || errors.register === 'Network Error');
 
   return (
     <S.AuthContainer>
@@ -24,10 +30,19 @@ const AuthContainer = ({ loginUser, registerUser }) => {
         </ul>
       </S.AuthHeader>
       {isLogin ? (
-        <LoginSection onSubmit={loginUser} />
+        <LoginSection
+          onSubmit={loginUser}
+          networkErr={networkErr}
+          errors={errors && errors.login}
+        />
       ) : (
-        <RegisterSection onSubmit={registerUser} />
+        <RegisterSection
+          onSubmit={registerUser}
+          networkErr={networkErr}
+          errors={errors && errors.register}
+        />
       )}
+      {networkErr && <S.AuthFooter>Network Error</S.AuthFooter>}
     </S.AuthContainer>
   );
 };

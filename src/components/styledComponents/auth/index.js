@@ -37,6 +37,11 @@ export const AuthHeader = styled.div`
   }
 `;
 
+export const AuthFooter = styled.div`
+  text-align: center;
+  color: red;
+`;
+
 export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -44,7 +49,7 @@ export const FormContainer = styled.div`
   width: 400px;
   margin: auto;
   padding: 1rem;
-  border: 1px solid #bbb;
+  border: 1px solid ${({ isInvalid }) => (isInvalid ? 'red' : '#bbb')};
   border-radius: 5px;
 
   h4 {
@@ -68,6 +73,10 @@ export const FormGroup = styled.div`
     &:focus {
       outline: none;
     }
+  }
+
+  .is-invalid {
+    border: 1px solid red;
   }
 `;
 

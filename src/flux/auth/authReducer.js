@@ -57,6 +57,25 @@ export default (state = initialState, action) => {
           login: action.response.errors
         }
       };
+    case 'LOGOUT_USER_STARTED':
+      return {
+        ...state,
+        loading: true
+      };
+    case 'LOGOUT_USER_SUCCESS':
+      return {
+        ...state,
+        loading: false,
+        user: {},
+        errors: {},
+        isAuthenticated: false
+      };
+    case 'LOGOUT_USER_FAILURE':
+      return {
+        ...state,
+        loading: false,
+        errors: action.response.errors
+      };
     default:
       return state;
   }

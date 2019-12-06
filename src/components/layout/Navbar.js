@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import S from '../styledComponents';
 import { dimensions } from '../styledComponents/breakpoints';
 import NavList from './NavList';
@@ -21,7 +22,7 @@ export const shouldSetResponsiveMode = (
   }
 };
 
-const Navbar = () => {
+const Navbar = ({ auth: { isAuthenticated }, logoutUser }) => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [responsiveMode, setResponsiveMode] = useState(false);
   const [isOpen, setOpen] = useState(false);
@@ -66,20 +67,34 @@ const Navbar = () => {
               {isOpen && (
                 <div className="fadeIn">
                   <ul>
-                    <NavList closeModal={resetModal} />
+                    <NavList
+                      closeModal={resetModal}
+                      isAuthenticated={isAuthenticated}
+                      logoutUser={logoutUser}
+                    />
                   </ul>
                 </div>
               )}
             </div>
           ) : (
             <ul className="flex-md-column flex-row navbar-nav w-100 justify-content-sm-around">
-              <NavList closeModal={resetModal} />
+              <NavList
+                closeModal={resetModal}
+                isAuthenticated={isAuthenticated}
+                logoutUser={logoutUser}
+              />
             </ul>
           )}
         </div>
       </nav>
     </S.Nav>
   );
+};
+
+Navbar.propTypes = {
+  auth: PropTypes.shape({
+    isAuthenticated: PropTypes.bool.isRequired
+  }).isRequired
 };
 
 export default Navbar;
