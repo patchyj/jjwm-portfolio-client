@@ -32,20 +32,18 @@ export function* loginUser(action) {
 export function* registerUser(action) {
   try {
     yield put({ type: actionTypes.REGISTER_USER_STARTED });
-    const response = yield call(httpPostRequest, 'register', action.payload);
-    if (response.status >= 200 && response.status < 300) {
+    const res = yield call(httpPostRequest, 'register', action.payload);
+    if (res.data.errors) throw res.data.errors;
+    if (res.status >= 200 && res.status < 300) {
       yield put({ type: actionTypes.REGISTER_USER_SUCCESS });
     } else {
-      throw response;
+      throw res;
     }
-  } catch (e) {
-    const {
-      response: { data }
-    } = e;
+  } catch (errors) {
     yield put({
       type: actionTypes.REGISTER_USER_FAILURE,
       response: {
-        errors: data.errors
+        errors
       }
     });
   }

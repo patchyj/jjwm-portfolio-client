@@ -10,11 +10,12 @@ class Register extends Component {
   constructor() {
     super();
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: '',
-      password2: ''
+      firstName: 'test',
+      lastName: 'mctesterson',
+      email: 'testabc@123.com',
+      password: 'password',
+      password2: 'password',
+      missingFields: {}
     };
   }
 
@@ -25,21 +26,38 @@ class Register extends Component {
     });
   };
 
-  onSubmit = () => {
+  handleSubmit = () => {
     const { firstName, lastName, email, password, password2 } = this.state;
+    const { onSubmit } = this.props;
 
-    console.log({
+    if (!firstName || !lastName || !email || !password || !password2) {
+      const obj = {};
+      Object.entries(this.state).forEach((e) => {
+        if (e[1] === '') obj[e[0]] = 'Missing field';
+      });
+      this.setState({ missingFields: obj });
+    } else {
+      onSubmit({
+        firstName,
+        lastName,
+        email,
+        password,
+        password2
+      });
+      this.setState({ missingFields: {} });
+    }
+  };
+
+  render() {
+    const {
       firstName,
       lastName,
       email,
       password,
-      password2
-    });
-  };
-
-  render() {
-    const { firstName, lastName, email, password, password2 } = this.state;
-    const { networkErr } = this.props;
+      password2,
+      missingFields
+    } = this.state;
+    const { networkErr, errors } = this.props;
 
     return (
       <S.FormContainer isInvalid={networkErr}>
@@ -50,6 +68,10 @@ class Register extends Component {
           name="firstName"
           value={firstName}
           onChange={this.onChange}
+          errors={
+            (errors && errors.firstName)
+            || (missingFields && missingFields.firstName)
+          }
         />
         <FormGroup
           label="Last Name"
@@ -57,6 +79,10 @@ class Register extends Component {
           name="lastName"
           value={lastName}
           onChange={this.onChange}
+          errors={
+            (errors && errors.lastName)
+            || (missingFields && missingFields.lastName)
+          }
         />
         <FormGroup
           label="Email"
@@ -65,6 +91,9 @@ class Register extends Component {
           name="email"
           value={email}
           onChange={this.onChange}
+          errors={
+            (errors && errors.email) || (missingFields && missingFields.email)
+          }
         />
         <FormGroup
           label="Password"
@@ -73,6 +102,10 @@ class Register extends Component {
           name="password"
           value={password}
           onChange={this.onChange}
+          errors={
+            (errors && errors.password)
+            || (missingFields && missingFields.password)
+          }
         />
         <FormGroup
           label="Password Confirmation"
@@ -81,19 +114,27 @@ class Register extends Component {
           name="password2"
           value={password2}
           onChange={this.onChange}
+          errors={
+            (errors && errors.password2)
+            || (missingFields && missingFields.password2)
+          }
         />
-        <FormSubmit label="Register" onSubmit={this.onSubmit} />
+        <FormSubmit label="Register" onSubmit={this.handleSubmit} />
       </S.FormContainer>
     );
   }
 }
 
 Register.propTypes = {
-  networkErr: PropTypes.bool
+  onSubmit: PropTypes.func,
+  networkErr: PropTypes.bool,
+  errors: PropTypes.shape({})
 };
 
 Register.defaultProps = {
-  networkErr: false
+  networkErr: false,
+  onSubmit: () => {},
+  errors: {}
 };
 
 export default Register;
