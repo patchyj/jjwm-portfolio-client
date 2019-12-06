@@ -7,12 +7,18 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('Navbar', () => {
   let wrapper;
+  const props = {
+    auth: {
+      isAuthenticated: false
+    },
+    logoutUser: jest.fn()
+  };
   const setState = jest.fn();
   const useStateSpy = jest.spyOn(React, 'useState');
   useStateSpy.mockImplementation(init => [init, setState]);
 
   beforeEach(() => {
-    wrapper = shallow(<Navbar />);
+    wrapper = shallow(<Navbar {...props} />);
   });
 
   afterEach(() => {
