@@ -39,7 +39,7 @@ const AuthContainer = ({ loginUser, registerUser, auth }) => {
         <RegisterSection
           onSubmit={registerUser}
           networkErr={networkErr}
-          errors={errors && errors.register}
+          errors={errors && errors.registration}
         />
       )}
       {networkErr && <S.AuthFooter>Network Error</S.AuthFooter>}

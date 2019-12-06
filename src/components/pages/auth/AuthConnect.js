@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   loginUser: data => dispatch(loginUser(data)),
-  registerUser: () => dispatch(registerUser())
+  registerUser: data => dispatch(registerUser(data))
 });
 
 export default connect(
