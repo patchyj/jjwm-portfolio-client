@@ -21,7 +21,7 @@ const Footer = () => (
       >
         <i className="fab fa-linkedin" />
       </a>
-      <a href="/static/resume.pdf" download>
+      <a href="/resume.pdf" download>
         <i className="fas fa-download" />
       </a>
     </h1>
